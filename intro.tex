@@ -244,6 +244,231 @@ Project 3 discussion.
 \item[Dec 14] Project 4 reports and presentations. Peer-review submission. 
 \end{description}
 
+\subsubsection{Project 1: Parallel Pied Piper Plaza}
+Last year we had a project called ``Parallel Pied Pipers'' whose
+description can be found
+\htmladdnormallink{here}{http://www.cs.columbia.edu/~kar/4444f14/node16.html}.
+(You should read last year's description before continuing.)
+This year we're going to use the same basic idea, but now it's a
+multi-player game!  The shape of the field that initially contains the
+rats is a square of size $F$ meters.  In the middle of each of the
+four sides of the field is a 2m wide gate.  Each of the four teams of
+pipers tries to get rats though their own gate (they are getting paid
+per captured rat).  Once a rat goes through the gate it exits the
+game.  There is a small holding area outside each gate, of size $F$
+meters by 10 meters, where a piper can move if he wishes.  All pipers start
+spaced out within the 2m gate.
+
+When pipers are away from other pipers, or are near other pipers from
+their own team, the piper/rat behavior is the same as last year's
+project.  However, because different piper teams play different music
+genres, rats are confused by the dissonance of different tunes.  In
+particular, consider a rat that can hear the music of multiple pipers
+from different teams because they are all within 10m of the rat and
+playing music.  If there is a single dominant tune (i.e., one of the
+teams has more nearby pipers than any single other team) then the rat
+will be attracted to the closest of the pipers from that team.
+Otherwise, the rat will behave as if there is no sound, i.e., the rat
+will not be attracted to any of the pipers.
+
+Each of the four teams has $d$ pipers.  Each piper is executing an
+instance of the same code, but instantiated with a unique piper-id
+parameter (between 1 and $d$).  Pipers have complete access to all
+positional information, including the positions and music-playing status of
+the other teams' pipers, but pipers do not explicitly communicate with other
+pipers.
+
+The simulator will detect when all rats have been eliminated, and you will be ranked based
+on the number of rats that exited though your gate.  There will be a timeout to
+handle cases where some rats simply can't be convinced
+to go though any gate.  We will run some tournaments at the end of class
+with various values for the parameters $F$, $S$ (the number of rats), and $d$.
+
+You will have access to the players and reports from last year's
+teams.  You can choose to use code written last year if you wish,
+making sure to make suitable acknowledgements.  Alternatively, you can
+write your own code from scratch if you prefer.
+
+Some ideas to think about:
+\begin{itemize}
+\item What kinds of coordinated teamwork (if any) are needed in this multiplayer version of the game?
+\item What is the impact of the dissonance of music from multiple nearby pipers?
+\end{itemize}
+
+\subsubsection{Project 2: Planet Builder}
+
+Asteroids of equal size orbit the sun in initially circular orbits at
+various radii.  There is a lower and upper radius bound, so that
+the asteroids are in a formation like the asteroid belt between
+Mars and Jupiter.  You get to
+push the asteroids a bit to change their trajectory.  When asteroids
+collide there is conservation of momentum and the asteroids remain
+joined (and larger).  Energy is not conserved: the newly formed
+asteroid heats up!  Your goal is to create a single planet made up of at
+least half the initial asteroid mass within a fixed time $T$.  Each
+time you exert a push, the energy required for that push is
+accumulated into your score; you want to minimize the total energy
+used. (Using a lot of energy to form a planet quickly scores worse
+than forming the planet more slowly with less energy, as long as the
+planet forms within $T$ time units.)
+
+Asteroids are influenced in their trajectory by the sun, whose gravity
+is strong.  The gravitational attraction of other asteroids is assumed
+to be negligible and is ignored by the simulator.  All interacations
+(including your pushing of asteroids) happen in the plane of rotation
+of the solar system.  A push perpendicular to the movement of the
+asteroid will change its orbit, but sill retain the circularity of the
+orbit; a non-perpendicular push (or collision) may lead to an
+elliptical orbit.
+
+For a cool related game concept, see \htmladdnormallink{Osmos}{http://www.osmos-game.com/}.
+\subsubsection{Project 3: Cookie Cutter II}
+
+In 2003, I gave a \htmladdnormallink{project}{http://www.cs.columbia.edu/~kar/4444f03/node16.html}
+involving cutting cookies from a piece of dough.  This year we're doing something different: competitive
+cookie cutting!  This is a game for two players, played on a 50x50 grid of dough.  Each player designs three
+cookie cutter shapes (details below) and tries to cut out as much of the dough as possible before the
+dough runs out.  The score is the total area of dough that your player manages to capture.  Your primary
+goal is to capture more dough than your opponent (as opposed to maximizing the amount of dough), so
+defensive strategies that block your opponent while blocking yourself to a lesser degree are worth
+considering.
+
+You get to make three cutters of size 11, 8, and 5 units.  These
+cutters must be a connected orthogonal set of unit squares.  So the 5-unit
+shape must be one of the 12 possible
+\htmladdnormallink{pentominos}{http://en.wikipedia.org/wiki/Pentomino},
+for example. (Actually, since we don't consider reflective symmetries, there
+are more than 12 choices: how many are there?)  Each player creates their 11-unit shape first and
+submits it to the simulator.  The simulator shares this information
+with both players, who then select their 8-unit shape.  After the
+simulator informs both players of the 8-unit selection, players submit
+their 5-unit shapes.  So players get to design the smaller shapes in
+light of the known choices of both players for the larger shapes.
+
+One final rule about selecting shapes.  The simulator will not allow players to select
+the same shape (taking the four rotational symmetries into account).  If players
+happen to select the same shape, both players' choices are rejected and players have to
+select a new shape, different from all previous choices.  If the simulator has to reject
+players' shapes 5 times in a row, then the simulator will randomly assign one of the five
+choices to each player (a different shape to each).
+
+The game is played by placing a cookie-cutter of your choice anywhere
+on the board in one of the four orthogonal orientations.  You may only
+select a location if there is dough remaining within each cell
+delimited by the cookie cutter.  Note that the cookie-cutter cannot include partial dough
+cells: the perimeter defined by the cookie-cutter must lie on the ``grid lines'' of the dough grid.
+At the end of the turn, your score is
+incremented by the size of the cutter used, and the corresponding
+dough is removed from the grid.  Players take turns, but to balance the
+game the first player must use the 5-unit cutter on the first turn.
+
+Some things to think about:
+\begin{itemize}
+\item What are the benefits and risks of regular shapes compared with irregular shapes?
+\item Near the beginning of the game, how should you space out your choices?
+\item How does knowing your opponent's larger shapes help you select your smaller shapes?
+\end{itemize}
+\subsubsection{Project 4}
+
+You're planning to attend a big party.  Some of your friends will be
+there, but many people will be strangers.  Among the strangers is your
+unknown soulmate.  Your goal is to have beneficial conversations with
+as many people as you can for three simulated hours. Friends are
+interesting to talk to, strangers less so, but your soulmate is
+particularly interesting.  Also, you need to move around in order to
+find people and chat with them.  The party takes place in a large
+square room measuring 20 meters on each side.
+
+Each turn of the simulator corresponds to a 6-second chunk of
+real-world time. During any turn your player may attempt to do one of the following:
+\begin{itemize}
+\item Move to a new position within the room anywhere within 6 meters of your current position. Any conversation
+you were previously engaged in is terminated: you have to be stationary to chat.
+\item Initiate a conversation with somebody who is standing at a distance between 0.5
+meters and 2 meters of you. In this case you do not move.
+You can only initiate a conversation with somebody on the next turn
+if they and you are both not currently engaged in a conversation with
+somebody else. (So there has to be at least one turn between conversations.)
+\item Continue a conversation that you were participating in during the previous turn. In this case you also do not move.
+\end{itemize}
+
+All players submit their orders together, and the outcome is resolved by the simulator using the following rules in sequence:
+\begin{enumerate}
+\item If two players were previously chatting, and both wish to continue the conversation, then
+the conversation continues.
+\item If two players, who were not previously chatting to anybody, simultaneously try to initiate a conversation
+with each other, then a conversation between them is begun.
+\item For each remaining player who tries to initiate a conversation, figure out how close each is to
+their conversation target, and do the following in increasing distance order (with ties broken randomly):
+\begin{enumerate}
+\item If the target is not already engaged in conversation on the current turn, then begin a new conversation
+between the two players.  The target cannot refuse (you have to be polite!) but can terminate the conversation on the
+next turn.
+The target's action for the current turn (whatever the action was) is cancelled and the target stays put.
+\item If the target is already engaged in conversation on the current turn, then the player stays put and does
+not begin a conversation.
+\end{enumerate}
+\item Players who try to continue a conversation with a partner who chooses to move away
+just stay put, and the conversation is ended.
+\item Any remaining players must be attempting to move.  All of those moves succeed.
+This includes players who terminate a conversation by moving:
+no other player would have been allowed to start a new conversation with them.
+\end{enumerate}
+Illegal moves (e.g., moving more than 6 meters in a turn, trying to start a conversation with somebody too close or
+too far away, etc.) will be treated by the simulator as a ``stay put'' directive.
+
+The purpose of a conversation is to accumulate
+gossip/wisdom/life-lessons, that come conveniently packaged in
+6-second units.  The wisdom that players can offer each other is
+captured in a two-dimensional array $W$.  There are $N$ players in the
+game, where $N$ is a parameter, so $W$ is an $N$ by $N$ array where
+$W[i,j]$ represents the total wisdom that player $i$ has to offer
+player $j$. ($W[i,i]$ is not meaningful.)  It is not always the case
+that $W[i,j]=W[j,i]$. 
+
+On a turn when players $i$ and $j$ are chatting, each has the
+opportunity to collect a unit of wisdom from their partner.  However,
+they will only obtain this wisdom if there is no other ``interfering''
+player closer to them than their conversation partner (too hard to
+hear otherwise!). It therefore pays to try to start your conversations
+away from other players.  Note that it is possible for one
+partner in the conversation to gain wisdom, while the other does not
+due to interference.  If $W[i,j]$ is nonzero and nobody is closer to
+$j$ than $i$ then the score of player $j$ is incremented by one and
+$W[i,j]$ is decremented by one. A symmetric outcome happens for player
+$i$. Once $W[i,j]$ reaches zero, $j$ has no further incentive to chat
+with $i$.
+
+Players have special relationships with other players.  Each player
+has $f$ friends, $s$ strangers, and one soulmate among the other
+players, where $f+1+s = N$. Players know who their friends are, but do
+not know who their soulmate is.  Friendship is symmetric.  If $i$ is a
+friend of $j$ then $j$ is a friend of $i$ and $W[i,j]=W[j,i]=50$. In
+other words, friends can chat productively for up to 5 minutes.
+
+Soulmates are also symmetric, but with $W[i,j]=W[j,i]=200$.  If $i$
+and $j$ are neither friends nor soulmates, then $W[i,j]$ is chosen at
+random from $\{ 0, 10, 20 \}$. To balance the game, the simulator will
+make sure that each player has the same number of $0$, $10$ and $20$
+values among all strangers. For nonfriends, when player $i$ chats with
+player $j$, player $j$ learns $W[i,j]$ and player $i$ learns
+$W[j,i]$. Prior to that initial conversation, $W[i,j]$ is unknown.
+Player $i$ is unaware of the values of $W[i,j]$ for strangers $j$.
+
+Finally, your player can see only a radius of 6m around its current position.
+The simulator will tell you the positions of all players within that radius.
+(Your player is free to remember previous locations of players that have
+gone outside the 6m radius if that
+information would be helpful later.) If two players who are both within
+6m are having a conversation, the simulator will make your player aware
+of this conversation. (How could that information be helpful?)
+The values of $N$, $f$, and $s$ are known to each player at the start of the game.
+
+We'll run several tournaments at the end of class using various
+parameter settings for $N$, $f$, and $s$. Large values of $N$ are
+possible, in which case we'll use multiple instances of players from
+each group.
+
 \subsection{Participants}
 
 The names of participating students are listed below.  If you are listed but do not intend to

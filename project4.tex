@@ -1,1 +1,357 @@
 \section{Work the Room}
+\subsection{Wednesday November 18, 2015}
+First discussion about project 4.
+
+Rules:
+
+Amar asked if everybody moves? Yes each guest is a player. So everybody moves to collect wisdom.
+Manyi wandered how win is achieved? Try to accommodate more wisdom.
+Kevin asked how this will be calculated. With the average of every player you have in the game.
+Diana asked if the players from each team are also friends. Yes
+Seth asked if you can stalk someone. Yes it is possible but probably you will lose opportunities.
+Preetam had stated the the win could be up to each team as it may vary because of different strategies.
+Robert wanted to know if the wisdom numbers is the same for each player. Yes each game has random {0, 10 ,20} values but each player has the same.
+Sagar asked when a player is free to start a conversation. After the end of one you have one move and then you can start a conversation.
+Manyi asked if can stay still. Yes you can.
+Nam asked if the number of soulmates varies as the number of people in the party. No one soulmate even if 1000 people.
+Derek asked if you know your friends. You are figuring out by the wisdom of the player. You cannot communicate between your instances (no static values). 
+Sania wandered if soulmates are reflective. Yes!
+Amar asked about the initial positions. They are random!
+Lingyan asked how you are making a decision of whom to go and how you know your friends.
+Each player has unique id and you can see everyone that is in 6 meters from you.
+Seth asked what happens when people are in equal distance. Too much noise in conversation you do not gain any wisdom. 
+Tingting asked how many friends you have. It is an argument.
+Sagar asked what happens when more than one person is at 0.5 meters. This is a strategy question
+Nam pointed that it will be better to take some time to walk the room and not to wait for specific person to end a conversation (stalking option).
+Costa asked about moving. It is a teleporting ability. You have one free move after conversation ends. Otherwise you can be stopped from someone. 
+Sagar asked for friends of a friends. No, they are not also your friends.
+Amar asked about more things to visualize. Up to teams to persuade Orestis.
+Amar asked if there will be any scaling in time and participants. Maybe something like more participants less time.
+
+Strategy questions:
+
+
+
+Preetam points that as no scoring metric is in place the strategy will be different for each player.
+Yes but you always should go for the best.
+Tingting said that you should position yourself at a corner in order not to be interrupted.
+Vinay believes that you should minimize the time not talking. You should go greedy.
+Robert adds that going greedy might be good as it gives better radius in walking the room.
+Dhruv believes that it is crucial when you will leave a conversation in order not to be interfered.
+Cathy believes that the strategy should change with how many people are in the room. More players then use up the time but if less try to expand in the room.
+Derek asks when a conversation ends? When another person is coming nearer? No it stops when one or both wants to stop.
+Rhea believes that we should always left some time with each person.
+Vishal believes that we should have history of the conversations. Then change strategy on how much you have already talked.
+Vinay asked if number of different people talked is a viable win strategy. Not how the project was build.
+Sagar added that when talk to strangers smaller threshold will prevail in conversations
+Also trying to find your soulmate will give you an estimation what is happening in the group.
+
+Deliverable for next time: initial player, Run with small numbers
+
+In what you will focus:
+Seth will work on setting up infrastructure and keep minutes of conversation
+Sania how much information want to give to others
+Jing choose crowded place might have not the best result.
+Sagar said if something is illegal you stay put. 
+Ananya, if you know how much friends you have you can base your strategy on this.
+
+\subsection{Monday November 23, 2015}
+The conversation started on how we should play the game.
+
+The main idea is not to have many guests for now. Like 2 groups with 9 guests each or 3 groups with 6 guests.
+
+Robert asked that if we fill the room with same players (same team) we will not be good as all we will have the same strategy.
+Sean asked if for small groups the time can be smaller. The time is fixed as a party cannot be less than 3 hours.
+Sagar asked what the players should maximize. Because there will be too many players with which they will compete.
+
+A poll for how many players would compete in our experiment gave that most of the people wanted many players competing. So all was used.
+Costa pointed out that the gui is not helpful on understanding what it is going on.
+Robert asked if it will be nice to add how many points a player can gather. This will give an insight on what is happening.
+
+We talked about how many friends we wanted for each player.
+We took a pole and the result was that we should use 4.
+
+Amar points out that if there are 2 teams that did not respect the threshold will be bad as conversation will stop abruptly.
+Dhruv added that players that are stalking others will lose turns with such strategy
+Robert believes that even if you find your soulmate, you can be interrupted and at the end to lose your soul mate for the rest of the party.
+Vishal point of view is, if you regularly schedule for new conversation mate you can find it again.
+Jing said that they have implemented a threshold. If you get interrupted 5 times then you stop conversation.
+Parthi believes that it is not critical as you can talk also to other players.
+Sagar suggests that a regular move between the players can solve this problem. Move north both parties of conversation to move away from the interruptor. Also when a player gather all wisdom can start with such behaviour to interrupt conversations.
+Derek asked for some explanation of the conversation mechanism. How the wisdom I gathered when interrupted and what happens with the interrupter. 
+Tingting added that the easier would be to get closer to the person you were talking.
+Seth points that if both do the same move then may move away from each other.
+Amar believes that going to the wall will have less probability to get interrupted.
+Parthi added 2 points in the conversation.First you should implement a promise. Like a place to go if interrupted. Second in general case the interrupter will go away as it will just pass by.
+Sagar suggestion is to have a function for the remaining wisdom to create a place to go. Malicious interrupters may always be near. 
+Vinay added that such function is not in the spirit of the game.
+Costa also added that as the game does leave us any communication should we stick with such function.
+Artur disagrees as we said that no communication should be happen.
+Sania believes that as this is for interrupting it should be fine.
+
+group8
+Robert said that they are going first for the strangers and then for friends. He believes that you can estimate what is best when the simulation starts. Sometimes going for your soulmate is not the best.
+
+group3
+Amar said that their strategy is going for wisdom. If you find someone that gives more go for him.
+Artur adds that going for soulmate was not productive.
+
+group2
+Dhruv is going for similar strategy but they found out that there are many errors when you were trying to go close to a person you want start talking to. So they are going $\frac{1}{3}$ of the way.Hoping that this will cover the distance faster.
+
+Robert added that going 0.5 and going on with this at the end it will converge.
+Amar believes that if you are not in the minimum distance you should move closer.
+Cathy points out that for gathering information you do not want to be close (in 6 meter you can see)
+Derek added that if the person does not want to talk to you. So if he stays put then you lose a step if you optimize.
+
+
+group5
+The group is trying to gather information and try for the person that probably wants to talk with them with more wisdom.
+
+Diana continues saying that players without many players around them may go away.
+Sania added that people maybe are talking but you cannot see it
+Jing’s opinion was that if you interrupt a soulmate conversation you will lose time as they will want to continue talking
+Alice proposed to make clusters and go tot the middle of them for better chances.
+Amar disagrees saying that cluster density will not suffice as the room is sparse.
+ 
+group6
+Manyi analyzes the strategy to be similar with group5. They gather information by “saying hello” to everybody.
+Kevin added that this can lead to problems if a team has programmed to unfavor such social players.
+
+group4
+Diana analyzed their strategy as more destructive as it tries to get in the middle of conversations to take some wisdom and make others lose.
+
+group1
+Sean explained that they first look for friends and then pick up strangers
+
+Orestis pointed out that you should optimize  that for every turn you talk with someone. It does not matter what he is.
+
+Sania believes that you should always take all wisdom from friends
+Vinay added that you should go for friends that wants to talk to you.
+
+A question have arisen if you should remember things and what these are.
+Robert said that you should not remember position as it will be pointless. You should remember whom you have seen before in order to calculate how much wisdom you still have in the game
+Sania believes that will be helpful to remember how the conversation ended in order not to lose time with a guy does not want to talk to you.
+
+group9
+Seth teams is trying to select the next conversation while you are at the end of a conversation.
+
+How you approach to do conversation:
+Dhruv opinion is that you should go to $0.5$ in order not to get interrupted 
+Derek believes that you should go for around 2 meters in order to start.
+
+group7
+Costa said that are prioritizing amongst soulmate and friends an go greeedy
+\subsection{Wednesday November 25, 2015}
+The course started again with a conversation on how the experiments will be run.
+ 
+
+Professor asked if going for experiments with 2 teams instead of many.
+ 
+
+Sania believes that going with many teams will not give any good implication.
+Dhruv added that with 2 teams would be better to see the behaviour of the player.
+Amar was suggesting that with only one team the result will be different.
+Artur was disagrreing with this notion as it should not be completely.
+
+g8 vs g1
+
+g8
+Robert said that their previous player was not doing the thinge they described previously. From this version they were looking for player conversations.
+
+g1
+Vishal explained that their player is remembering people with whom they have talked and how the conversation ended. They add ignore list for people left conversation as potential they do not have more wisdom to gain so they will not speak them again.
+
+Professor asked if this is a good strategy.
+
+Ananya said that is good as the wisdom of this person to the other is up. So trying to talk to him to get more wisdom will be stalking.
+Sean also believes that is a good strategy. Breaking a conversation maybe a hint of adversarial tactique. So stop talking for a while to this person.
+Cathy added that is good at the beginning as you have many people to look for wisdom. But when the end is near you may want that wisdom.
+Pathi went a bit more saying that you should see how much you took. If it is near ten then the wisdom is up. if not then maybe you can have some more.
+Robert argued that with not stable distribution is hard to know if you get the whole wisdom or not. So trying to reach maximum is not viable as you do not have same wisdom per person.
+Nam suggested that the problem resembles prisoner’s dilemma. So it is better to be cooperative.
+Preetam disagreed as it is one dilemma per run and it is cannot be related.
+Professor responded that if each conversation is taken as a dilemma at the end you have the iterative part of the dilemma.
+Kevin added that it does not resembles prisoner's dilemma. Because we cannot be sure that the cumulative result is advantageous for both. It seems as a chicken out problem. The one that stays more, is penalized more.
+Amar believes in an altruistic society that you keep talking to the other to also have the same wisdom.
+Robert replied to that with if more wisdom on the game then you are not maximizing yours.
+g7 vs g6
+g7 
+Vinay explained that the strategy is to go to away players in order to get less interrupts.
+
+g6
+Ananya said they are maximizing most people to talk with. If they found soul mate then talk for all the time. Low wisdom may be an aftermath of the “hello” technique. 
+Amar believes that the clustering they do is the reason for low wisdom.
+
+g9 vs g2
+g9 
+Samarth describes the strategy as try to go to 2 meters. If they are interrupted then try to go closer.
+Ananya asked if the player 0 is doing the “hello” technique. 
+
+Robert added that if small parties all players have time to talk with everybody.
+
+Big party configuration.
+We should not put too much friends because at the end you will get all wisdom.
+
+g5 (took most wisdom)
+They are going for the closest after end of conversation
+
+Orestis added that if you are in big party go simple. If you are in small go for soulmate.
+
+Vinay added that if many friends is difficult to find the soulmate. if small number of people you will find your soulmate for sure.
+Amar pointed out that going 6m they lose too much space.
+
+Is good to search for your soulmate?
+Robert replied that if you do not have any friends then is the best to go for soulmate.
+
+Lingyan asked g5 if they have a threshold for interrupt.
+Jing replied that they have and also are going closer to the guy talking to.
+
+Tingting believes that you should weigh differently friends and strangers for knowing where to go for better wisdom.
+
+Kevin added that if there is 3 persons trying to do conversation the 5 ticks can be advantageous.
+Robert believes that g5 has an advantage because of g8 as they are waiting for strangers.
+
+Artur added that you can predict behaviour even without talking to people. This can be done with some more analytics about the players you encounter.
+Manyi believed that they should try to maximize the people talking to outside how much wisdom they are getting. The answer was that they should not do this because it is not the spirit of the game.
+
+They team should start thinking about the 5 ticks wait period to maximize conversation time.
+
+\subsection{Monday November 30, 2015}
+A conversation started today if finding your soulmate gives any advantage.
+Sagar replied that talking to strangers is better than talking to your soulmate.
+Seth added that talking to soulmate is good but in terms of points is the same as talking to anybody. So we should double the points we are getting from them.
+Kevin believes that we should have a function asking if we have more wisdom in order not to know if it is our soulmate but to learn through the conversation.
+Costa pointed out that finding your soulmate just gives another player with more time. does not give any advantage.
+
+We took a poll about seth proposal (double how much soulmate gives)
+Was voted in favor.
+Costa also would like to have a response if we found the soulmate.
+Sagar would like to cut the time in half for the soulmate in order to have more time for other players.
+Professor replied that 20 minutes is minimum for talking with your soulmate.
+
+Configuration of the experiment:
+Amar suggested that we should go big 300 people with 10 friends.
+
+Robert pointed out that they got a 35% increase when they changed the threshold from 0.5 to 0.6. Because with the calculations they were getting 0.499…. which was not passing the simulator.
+Amar added that as many teams were going for 5 clicks they also change to wait if they had more wisdom to gain from the people they were talking to.
+Artur believes if more than 100 people in the party is not wishful to wait.
+g5 player strategy as explained by sagar is that they go for the best wisdom guy at 6m radius
+Also now they are using a heuristic to understand how close they are to find their soulmate.
+Ananya added that the g6 fixed the problem of gathering. Also they had some problems with their soulmate not wanting to talk so they stalked. 
+Sagar said they never had any such problem as they genral they are not wander around.
+They were a group at the corner and Amar wanted to know if we know which group this is.
+Preetam suggested that they have gain all the wisdom and went there in order not to give any more. 
+Lingyan pointed out that in a such party they are able to drain the wisdom.
+Seth believed that maybe it is a destination point.
+Cathy said that they (g1) are probably the one that created this group. Because when do clustering they go to the denser area. So things can add up.
+Derek suggested that if they found dense group should not go. If moderate then go.
+Pathi added that hardcoded locations should be avoided as can lead to such clusters.
+Alice pointed out that they do not have hardcoded location. They just went to denser cluster.
+Robert said that they also tried clustering but it was too bad because of density. If you end up with a dense are you are surrounded and you cannot be productive.
+Cathy believed that going greedy in big party can create such groups.
+Ananya added that they are detecting if being in dense area. First by inactivity (no wisdom for many ticks) and for people are in our 6m range. If found then go to a random place and start a conversation.
+As productivity is what matters Dhruv said that if too many click inactive then go for a conversation
+Sagar added that only if you do not have any to talk go for 6m.
+Samarth also was in favor for such technique. As it gives more space to find player.
+Vinay believed that you should search first nearby and then started going to different location.
+Costa added that every move should be beneficiary.
+Parthi also said that not always go for random because if you are in a corner you can end up more in the corner.
+
+
+A new configuration run with 100 people and 5 friends.
+
+professor asked how the players are ranking people.
+g7 said that if more than one then go for more wisdom.
+Vinay said that are going for the closest.
+Manyi also pointed out that the first option maybe is talking.
+Artur added that if many people in the party do not go for small wisdom.
+Manyi said that keeping track of players will give you an insight in order not to go for some players that may not want to talk to you.
+Sagar added that they have an average mechanism to report how much wisdom is left between 2 players
+Sania also believes that having an estimate of wisdom can save from unnecessary conversation.
+Parthi added that you should have a good estimate by the time you broke up the conversation with each player.
+Jing pointed out that some certain situations can get some more wisdom.
+
+Professor asked how you estimate the wisdom.
+Seth pointed out that if you got chased then they have some more wisdom.
+Robert added that you can get from behaviour. If they are stalking you they have more. If run then they do not have more.
+Amar suggested to count up what wisdom you accumulate and not down. We know the limits 10.20 ,.. so try to find how many more you have.
+Sagar pointed out that breaking after one tick is not bad as you may want to come closer.Start few conversations from afar. 
+Dhruv added that some are trying to go closer but are starting conversation from 2m.
+
+Professor asked how many are going for 0.6.
+Half the groups replied yes.
+Kevin suggested not to go immediately to closer location. Wait to be interrupted because you may lose ticks.
+Dhruv also pointed out that 0.6 is not the best as it may still go closer and lose the turn.
+Sagar mentioned that you should go for a bit pivoting and not in straight line.
+Samarth opinion is the one which we talked last time the converged one.
+Seth points out that if you do not go direct maybe they will misinterpret your move.
+
+What is the most important thing for next time:
+Samarth says that with new reward find soulmate is something new.
+Cathy believes that finding a threshold to start a conversation distance is crucial
+Amar added a destructive technique. If you add all wisdom go to the corner and wait.
+Dhruv also pointed out that different strategies for large/small parties can be created.
+Sagar suggested that the whole purpose is to minimize bad ticks -ticks with no wisdom.
+So if you wait 5 ticks you lose a big chunk of time.
+\subsection{Wednesday December 2, 2015}
+The conversation started with the asking for possible scenarios to run
+
+Dhruv asked for one with no friends. As this will give better results and will have the soulmate for some teams.
+Sean replied that a small party will affect best if you found or not your soulmate.
+Derek said that a configuration with 50 people will be the best as efficient teams can collect all the wisdom.
+Seth pointed out that if there are less people then all will find their soulmate
+Sagar added that with no friends the strategy is simple.
+
+
+100 people - 0 friends
+
+Costa said as g7 had the best wisdom that they added the potential wisdom code and also started going closer.
+Sagar from g5 stated that they change their code to be disruptive. They saw that with their previous code they were chasing down people to talk. So they started going disturbing people. Their new approach did not gave them better results but lower all others significantly.
+Nam proposed banning also interrupting people to lower their wisdom.
+Costa added that as we do not have communication we can do anything as a team.
+Preetam told that we can come and go in order to do the same strategy as g5 is doing.
+Robert believes that if the soulmate is close they can resume the conversation.
+Also after Robert’s question g7 replied that they are not doing anything for the disruptive strategy of g5.
+Amar said that they are trying to have better strategies for people with potential more wisdom.
+Sean also added that they added a wisdom threshold so the soulmate will have better waiting.
+Sagar pointed out that not all interruptions are result of their player. So it is still better not to do anything as it is probably a pass by.
+Vinay added that you should not have all your players disruptive but have a portion of them at the beginning.
+Robert also pointed that there is too much randomness so you can end up with all your soulmates to the same disruptive player.
+Vishal believed is feasible to change behaviour amongst the different interactions (friend, stranger, soulmate) .
+
+A conversation started from having 2 kind of players from a team.
+
+Amar believes that having a universal player is best as you will have better results for many instances.
+Costa wants to add the wingman instance that if someone is talking with his soulmate to interrupt the interrupter. 
+Dhruv points out that having 2 strategies that are doing great is not possible. Every group should have organizers and workers. Only with the correct balance you can achieve the best.
+Sagar believes that a counter strategy with the interruption is to go for a particular instance to have the best score. Then the rest will pick up some wisdom. As the disruptive will lower the rest players you will get more.
+
+This tight conversation arrangement gave the idea of square dance proposed by professor.
+Parthi pointed out that not all conversations are good as you may have more strangers with low wisdom than friends.
+Vishal believes that as all teams will speak with similar numbers of people then the cumulative wisdom would similar.
+Kevin proposed to have a loose square dance with empty spaces to have players in and out to have more random results.
+Preetam added that with such strategy teams that are selfless will have best results as they will not preempt.
+
+A poll took place about the square dance.
+Only 1 vote from Parthi.
+Parthi told that in such game all will try to get the best out of each player.
+Sagar believes that if all players are coordinating then interrupting is easier.
+Alice added that this incentive is like speed dating in which the main problem is that the 2 parts does not have big wisdom. So for us is not the best solution to have something like this.
+Seth added that it is as a multiplayer prisoner’s dilemma as if one is not cooperating then everybody will lose.
+
+The conversation ended there as there was not much time. Professor would like to have a small conversation about the tournament.
+
+Saman would like to have some direct tournaments between 2 players.
+Ananya proposed a much /less friends parties in order to give soulmate a favor
+Dhruv requested parties where all players can gather the wisdom in order to test efficiency.
+Seth would like some dense boards where conversation can be interrupted easily.
+Amar idea is to see some percent of friends (0,10%,20%).
+Sagar pointed out that if not many friends then strangers are getting more value along the soulmate.
+
+Professor tried to initiate a conversation about what is a good strategy for dense parties.
+Sania said that going to edge will give you less plane to be interfered.
+Alice added that then a corner will also give you less plane.
+Derek pointed out that if everybody does that then the middle will be sparse.
+Sania continued saying that you can create clusters of wisdom and try to go near them.
+Parthi point of view was that if too dense then no one will get much wisdom. So split team in half and point half to a corner/edge and rest talking. in the middle of the game change teams.

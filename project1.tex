@@ -2,7 +2,9 @@
 \subsection{Monday September 14, 2015}
 First students asked questions about the project, the summary is:
 
-Groups will have to write code for a player. Number of rats, pipers and the (square) board dimension will be dynamic as arguments (Read the README file and the sample code that are in the simulator).
+Groups will have to write code for a player. Number of rats, pipers and the (square) 
+board dimension will be dynamic as arguments (Read the README file and the sample 
+code that are in the simulator).
 
 General:
 You will now all the position of pipers/rats.
@@ -13,9 +15,10 @@ If you specialize your solution that is fine. You have to explain it in your pre
 Throw exceptions! Do not exit!
 
 Rats:
-They will follow the dominant piper. If more than one of the same player will follow the closest.
-For the direction of rats you should calculate it from the 2 consecutive runs. You can save states
-for such calculations. 
+They will follow the dominant piper. If more than one of the same player will 
+follow the closest.
+For the direction of rats you should calculate it from the 2 consecutive runs. 
+You can save states for such calculations. 
 If rats enter through the gate cannot come back (as opposed to last year’s project).
 If they get confused by dissonance of different tunes, they get a random new direction.
 
@@ -25,25 +28,44 @@ Pipers cannot communicate between them but they can know what strategy the other
 You will know if a piper was playing music (or not) in the previous run.
 
 Tournament:
-The player that gathered most of the rats is winning the tournament (but not a better grade).
-Many tournaments between random teams will be held. The best team will be the one that gets the same amount of rats (the bigger amount the better) at tournaments. 
+The player that gathered most of the rats is winning the tournament (but not a 
+better grade).
+Many tournaments between random teams will be held. The best team will be the 
+one that gets the same amount of rats (the bigger amount the better) at 
+tournaments. 
 
 
 Strategies:
 
-Dhruv stated that having a piper as magnet as done for the last year’s project will not be feasible as now a rat can be stolen from another team.
-Preetam asked if fighting between the players is viable. Professor said that you can do it but it may not be the best practice as you can compete with more pipers.
-Kostantin suggested that we should abandon rats that are far away from out gate. That rats will be easily attracted from pipers whose gates are closer to them. 
-Jake started the discussion about disruption of other layers. In particular will be nice to have a piper to disruptive other players. This can be in vain if more than one piper per rat.
+Dhruv stated that having a piper as magnet as done for the last year’s project 
+will not be feasible as now a rat can be stolen from another team.
+Preetam asked if fighting between the players is viable. Professor said that you 
+can do it but it may not be the best practice as you can compete with more pipers.
+Kostantin suggested that we should abandon rats that are far away from out gate. 
+That rats will be easily attracted from pipers whose gates are closer to them. 
+Jake started the discussion about disruption of other layers. In particular will 
+be nice to have a piper to disruptive other players. This can be in vain if more 
+than one piper per rat.
 
-A method that can be transferred from last year’s project is the optimizing the movements of our pipers with trajectories of rats. 
+A method that can be transferred from last year’s project is the optimizing the 
+movements of our pipers with trajectories of rats. 
 
 Tingting proposed to divide the space and direct our pipers to specific location.
-Ethan continued that in last year’s project were solutions about dense versus sparse spaces of rats. Professor added the solution of swipe for dense spaces.
-Parthiban asked if there will be any time or space limit. Professor explained that there will be a time limit. If this limit is reached, it means that there still are free rats. The tournament ends and we do not take into account the rats outside holding areas.
+Ethan continued that in last year’s project were solutions about dense versus sparse 
+spaces of rats. Professor added the solution of swipe for dense spaces.
+Parthiban asked if there will be any time or space limit. Professor explained that 
+there will be a time limit. If this limit is reached, it means that there still 
+are free rats. The tournament ends and we do not take into account the rats outside holding areas.
 Derek wanting to know what would be the numbers of the tournaments. Professor answered that a number of 10000 rats and 10 pipers are feasible. 
 Vinay added that the coordination between pipers can be transferred from last year’s project but with some changes.
-Sagar started talking about disruptive tactics with the idea of positioning a piper in rivals gate. Sania replied that having 2 pipers controlling the rat will be easy to pass such problem. Manyi suggested that you can leave yourself one in your gate and that will solve the problem. Ethan continued the idea of doing the same in the rival’s gate. Konstantin pointed out that if you have small amount of recourses you can harass one or two player maximum. Some other student pointed that if you have more than 2 rivals is not a good strategy as you are losing 3 pipers that can get you some more rats (if you know you she/he was email me).
+Sagar started talking about disruptive tactics with the idea of positioning a piper 
+in rivals gate. Sania replied that having 2 pipers controlling the rat will be 
+easy to pass such problem. Manyi suggested that you can leave yourself one in your 
+gate and that will solve the problem. Ethan continued the idea of doing the same 
+in the rival’s gate. Konstantin pointed out that if you have small amount of 
+recourses you can harass one or two player maximum. Some other student pointed 
+that if you have more than 2 rivals is not a good strategy as you are losing 3 
+pipers that can get you some more rats (if you know you she/he was email me).
 Naman suggested that we can sabotage the best player. Kevin added some corner case maybe are worth sabotaging like 10 rats following one piper. 
 Manyi recommended that we can send all pipers to one rat. Sania added that this strategy will have low coverage.
 Jing Hu suggested that we should find the region with more rats and head there (density).
@@ -205,13 +227,20 @@ Robert said that avoiding the pipers of the other teams would be a better tactic
 Tingting says that a strategy they are thinking is to have a smaller group of returning pipers if no enemy piper is following.
 Konstantin states that in general a piper for putting the rats inside is essential as they were having problems putting the rats inside their area.
 
-Group 3 have created a strategy to counter attack sweeping techniques. They lost because most of their opponents converged earlier than they had thought.
-Amar says that they were hunting the closest rats when the area is sparse. But they should estimate the cost of sending a piper for stealing rats.
+Group 3 have created a strategy to counter attack sweeping techniques. They lost 
+because most of their opponents converged earlier than they had thought.
+Amar says that they were hunting the closest rats when the area is sparse. But 
+they should estimate the cost of sending a piper for stealing rats.
 
-Group 2 expressed that they robbed most of their rats after the sweeping strategy because they re-assigned one of the guard pipers. 
-The problem of leading the rats through the gate was stated again. Orestis answered that pipers do not have any issue for being at the same place at the same time. So it should not that of a problem.
-Vishal says that we should wait a bit before entering the gate in order to have the rats closer.
-Naman adds that having the rats in straight line may be be better as you can enter the gate effortlessly.
+Group 2 expressed that they robbed most of their rats after the sweeping strategy 
+because they re-assigned one of the guard pipers. 
+The problem of leading the rats through the gate was stated again. Orestis answered 
+that pipers do not have any issue for being at the same place at the same time. 
+So it should not that of a problem.
+Vishal says that we should wait a bit before entering the gate in order to have 
+the rats closer.
+Naman adds that having the rats in straight line may be be better as you can enter 
+the gate effortlessly.
 
 3rd Tournament Group 1-4-8-5:
 Sparse configuration.
@@ -245,55 +274,90 @@ Anaya says that only one team was toggling the music when stealing.
 Artur answers that was an after effect of their strategy as when a piper loses his rat(s) stops playing music and tries to win it again.
 Konstantin states that they stop the piper place him near the end of it circumference and start playing again. They are doing this if the rat is near the end of the circumference of the other piper they can steal them if the random direction, the rat will follow are towards the,/
 Vinay says that splitting is more productive as the group coner more and can lure more rats to their gate.
-Sania observes that the randomness of the rats are affecting the outcome as some times more rats are in the area close to the gate of a group.
+Sania observes that the randomness of the rats are affecting the outcome as some 
+times more rats are in the area close to the gate of a group.
 Professor states this will be insignificant because of the many times we will run the tournaments
-Tingting thinks that we have some space for improvement on the strategy we are following when we are returning to the gate.
-Konstantin says that they did some experiments in order to find where is the optimal places the piper should go at the beginning. They found that the center is the best approximation.
-Vishal says that the positions should be more dynamic as may most of the rats may be in the other side of the board.
-Amar states that is good to split up early in the game to cover more area but the time of converge will maximize your rats. If you choose to converge later you may lose rats near the gate. 
-Jing says that going for more rats at the beginning and try to control more rats before you converge is good strategy. And keeping the rats closer to the piper increases the possibility to actually return to gate with more rats.
-Vinay says that his team has a semicircle that when a piper enters there more pipers are converging to bodyguard him.
-We run some more tournaments with a different configuration. We increase the rats to 500 and the pipers to 6. Group 7 had an issue with the number of rats. Are more and more rats were out of the board the speed was increasing. 
-Parthiban observed that many pipers were changing direction in the middle of a move. Such movements could cost time to the pipers and eventually rats. We have to do better prediction and try to minimize the lost time of such movement.
-Sean says that when everybody is sweeping at the beginning of a dense board, it is safer to put all the rats with one piper and the rest should start sweep again.
-Preetam continues that if you use such strategy, the piper should be close to the gate because if this is found by stealing groups, the piper should not be far away as they can stop playing music and go to the gate to steal from there.
-Cathy says that we should discover if a team sweeps not in unison and try to steal with a sweeping team of more pipers.
-Kevin states that their strategy dynamically founds how many pipers of a team tries to attack them and they send a +1 piper to bodyguard.
+Tingting thinks that we have some space for improvement on the strategy we are 
+following when we are returning to the gate.
+Konstantin says that they did some experiments in order to find where is the optimal 
+places the piper should go at the beginning. They found that the center is the 
+best approximation.
+Vishal says that the positions should be more dynamic as may most of the rats may 
+be in the other side of the board.
+Amar states that is good to split up early in the game to cover more area but the 
+time of converge will maximize your rats. If you choose to converge later you may 
+lose rats near the gate. 
+Jing says that going for more rats at the beginning and try to control more rats 
+before you converge is good strategy. And keeping the rats closer to the piper 
+increases the possibility to actually return to gate with more rats.
+Vinay says that his team has a semicircle that when a piper enters there more 
+pipers are converging to bodyguard him.
+We run some more tournaments with a different configuration. We increase the rats 
+to 500 and the pipers to 6. Group 7 had an issue with the number of rats. Are more 
+and more rats were out of the board the speed was increasing. 
+Parthiban observed that many pipers were changing direction in the middle of a 
+move. Such movements could cost time to the pipers and eventually rats. We have 
+to do better prediction and try to minimize the lost time of such movement.
+Sean says that when everybody is sweeping at the beginning of a dense board, it 
+is safer to put all the rats with one piper and the rest should start sweep again.
+Preetam continues that if you use such strategy, the piper should be close to the 
+gate because if this is found by stealing groups, the piper should not be far away 
+as they can stop playing music and go to the gate to steal from there.
+Cathy says that we should discover if a team sweeps not in unison and try to 
+steal with a sweeping team of more pipers.
+Kevin states that their strategy dynamically founds how many pipers of a team 
+tries to attack them and they send a +1 piper to bodyguard.
 
 Here the conversation was pivot on what configuration the tournaments should run.
 Professor asks if 1 piper is something worthy to test.
 Vinay states that with one piper we should not focus on stealing.
-Dhruv says that with one piper we will clean your area close to the gate fast and then it will take more time to find and get a rat.
+Dhruv says that with one piper we will clean your area close to the gate fast and 
+then it will take more time to find and get a rat.
 Sania thinks that as most of the strategies are focusing in the teamwork maybe is not the best configuration. 
 Amar thinks that with 1 piper we can distinguish which team has the best approach on how to prioritize the rats.
 Kevin suggests that with 1 piper will be focused on your local triangle rather than going far.
-Professor argued that the many pipers are producing more sophisticated strategies. A single piper can give us hints on how simple strategies can overcome others.
-Sagar suggests that with one piper we cannot have any defense. So destructive players may be in favor.
+Professor argued that the many pipers are producing more sophisticated strategies. 
+A single piper can give us hints on how simple strategies can overcome others.
+Sagar suggests that with one piper we cannot have any defense. So destructive 
+players may be in favor.
 Professor asked if we should introduce a maximum number of pipers.
-Robert suggested that the maximum pipers would be the number when teams of 2 pipers can sweep all the board.
-Vinay says that the number of rats should be the upper limit of the pipers. We should always have more rats than pipers.
+Robert suggested that the maximum pipers would be the number when teams of 2 pipers 
+can sweep all the board.
+Vinay says that the number of rats should be the upper limit of the pipers. We 
+should always have more rats than pipers.
 
-The number of rats did not created much of a conversation as the student concluded that both sparse and dense boards should be covered.
+The number of rats did not created much of a conversation as the student concluded 
+that both sparse and dense boards should be covered.
 
 The board size was suggested by the student not to be enormous.
-Derek said that a big board will change the strategies as the pipers have too much distance to travel.
-Sagar disagreed as all of the pipers will have the same speed. The problem will be when we will have a big board with few pipers. As the covering space of the playing pipers will not cover much of the board and the sweep will not be efficient.
-Konstantin added that with big board the time of a fight for some rats will be bigger so it will be better to do other things instead.
-Vinay suggested that if you are trying to do clustering then the big board will create a mees of such strategies.
+Derek said that a big board will change the strategies as the pipers have too 
+much distance to travel.
+Sagar disagreed as all of the pipers will have the same speed. The problem will 
+be when we will have a big board with few pipers. As the covering space of the 
+playing pipers will not cover much of the board and the sweep will not be efficient.
+Konstantin added that with big board the time of a fight for some rats will be 
+bigger so it will be better to do other things instead.
+Vinay suggested that if you are trying to do clustering then the big board will 
+create a mees of such strategies.
 
 The deliverable for next Monday will be an almost ready piper.
 
-Cathy asked when will be the due date for the report and professor stated that it will be the same as the presentation. 
+Cathy asked when will be the due date for the report and professor stated that 
+it will be the same as the presentation. 
 
-The presentation that will have more data and more clear explanation of why you choose the strategy will have better grade.
+The presentation that will have more data and more clear explanation of why you 
+choose the strategy will have better grade.
 Every team will have 7 minutes to present so do some dry runs.
 
 
 What is the most important thing for the next class:
-Sagar thinks that we should optimize the return path as we can pick some more rats as we return.
+Sagar thinks that we should optimize the return path as we can pick some more rats 
+as we return.
 Preetam suggested that we should avoid simple sweeps as it always lose rats.
-Manyi thinks that we should focus in the efficiency of our strategy at the beginning and not in stealing
-Sania thought is the point in time that we will choose to converge our pipers is crucial. We should investigate the trade off and pick the best time. 
+Manyi thinks that we should focus in the efficiency of our strategy at the beginning 
+and not in stealing
+Sania thought is the point in time that we will choose to converge our pipers is 
+crucial. We should investigate the trade off and pick the best time. 
 Tingting opinion is that still the strategy lacks of sophistication and prediction.
 Rhea raises again the issue that a better threshold when we change strategies are crucial.
 
@@ -308,41 +372,60 @@ Sagar made a question if presentation should be in powerpoint.
 You can use whatever seems fit from Powerpoint to google slides.
 The TAs will help you with their laptops. 
 Samarth was anxious if they found a bug after the deadline.
-In general you can add this in your presentation but still we will take the bug into consideration
-The results of the tournament will be published in a MySQL database. Some example queries will be given. Also a dump of the db will be also available.
+In general you can add this in your presentation but still we will take the bug 
+into consideration
+The results of the tournament will be published in a MySQL database. Some example 
+queries will be given. Also a dump of the db will be also available.
 
-Then we started with some experiments. First we started with a sparse board. 1 piper with 10 rats at default size board.
+Then we started with some experiments. First we started with a sparse board. 1 
+piper with 10 rats at default size board.
 
-Amar saw that 2 teams started fighting early and the other 2 lured the rest of the rats without big trouble.
-Dhruv find out that many teams are trying to reclaim stolen rats that can lead to lose more rats in the process.
-Preetam said that the rats that are dispersed when they lose the piper can be reclaimed or swept away easily.
+Amar saw that 2 teams started fighting early and the other 2 lured the rest of 
+the rats without big trouble.
+Dhruv find out that many teams are trying to reclaim stolen rats that can lead 
+to lose more rats in the process.
+Preetam said that the rats that are dispersed when they lose the piper can be 
+reclaimed or swept away easily.
 
-Seth described how their team chase some rats that are close to the piper as they are returning to the gate.
+Seth described how their team chase some rats that are close to the piper as they 
+are returning to the gate.
 Vishal points that this is a good strategy and they have implemented something similar.
-Cathy points out that some teams try to sweep the board even though few rats were on the board. That led them far away from the gate and eventually with fewer rats.
-Kevin suggests that going in a sparse board for rats far away is waste of time. In that time you can sweep your area and “secure” the rats close to you.
+Cathy points out that some teams try to sweep the board even though few rats were 
+on the board. That led them far away from the gate and eventually with fewer rats.
+Kevin suggests that going in a sparse board for rats far away is waste of time. 
+In that time you can sweep your area and “secure” the rats close to you.
 Lingyan observed that group 6 lost too many rats as they were returning.
 Nam said that their team is good at stealing and we saw this in the experiments.
 Robert adds that the toggling of music is crucial for stealing.
 Derek states that if you are trying to steal and the rats goes away from you toggle music.
 Sania described how such pipers are risking going far away.
 Preetam confirms that going far away is not the best practice.
-Konstantin explains how their distance function lead the pipers to go for a fight. A rat that was already lured was closer from a free one.
-Sagar believes that even if they were going for the free maybe another piper will come to fight them. That means the result will be the same.
-Manyi suggested that we should look on the distance of the rat and decide which one is easier to lure.
+Konstantin explains how their distance function lead the pipers to go for a fight. 
+A rat that was already lured was closer from a free one.
+Sagar believes that even if they were going for the free maybe another piper will 
+come to fight them. That means the result will be the same.
+Manyi suggested that we should look on the distance of the rat and decide which 
+one is easier to lure.
 Rhea suggested that going far away can lead to tail problem.
-Amar explains how the tail problem could be something good. Because the enemy pipers can take some rats from the tail and leave the piper with the big cluster.
+Amar explains how the tail problem could be something good. Because the enemy 
+pipers can take some rats from the tail and leave the piper with the big cluster.
 
-Tingting claims that having a collection of strategies and then a meta strategy that can orchestrate them. But changing too many times or even once can lead to worse results.
+Tingting claims that having a collection of strategies and then a meta strategy 
+that can orchestrate them. But changing too many times or even once can lead to 
+worse results.
 
-Here we changed the configuration of our experiments. We went to a dense board to see how the players react. 1piper still with 500 rats and default size board.
-Naman observes that still some teams are not efficient as they lose some rats because they are not going throught the gate.
-Seth suggested that going for the rats closer to you may lead in some quick sweeps but it is not guaranteed that there will be rats.
+Here we changed the configuration of our experiments. We went to a dense board to 
+see how the players react. 1piper still with 500 rats and default size board.
+Naman observes that still some teams are not efficient as they lose some rats 
+because they are not going throught the gate.
+Seth suggested that going for the rats closer to you may lead in some quick sweeps 
+but it is not guaranteed that there will be rats.
 Sania noticed that even with many rats some are choosing to fight instead of go get the free ones.
 Vinay points out that you can afford to lose some rats to achieve that the rest will go through the gate.
 Dhruv’s opininon is that the crucial points is when or not to sweep.
 Ananya points that the sweep should be done in ares with more rats and less pipers.
-Naman believes that sweeping fast and not far away form the gate and then try to steal find unlured rats and bring them back.
+Naman believes that sweeping fast and not far away form the gate and then try to 
+steal find unlured rats and bring them back.
 
 Being reasonable democratic the class decide that the configurtion for the tournaments should be:
 pipers: 1- 6- 13 == 1 for testing this corner case, 13 to break symmetries and 6 to enforce them
@@ -357,9 +440,11 @@ you should minimize how dangerous you are.
 Vinay proposes that changing strategies can be rewarding.
 Ananya believes that returning strategies can give some more rats and maybe the win!
 Sania supports that the stealing with one piper is crucial and it should be tuned.
-Jing said that adjusting the sweep tactics to reach the corners can give some stray rats.
+Jing said that adjusting the sweep tactics to reach the corners can give some 
+stray rats.
 
-Konstantin asked how the tournaments will end. By a timeout depending when a rat reached a gate. If much time without rat at gate, stop.
+Konstantin asked how the tournaments will end. By a timeout depending when a rat 
+reached a gate. If much time without rat at gate, stop.
 The students were asked about the outcome of the tournament
 Amar believes that as we use mostly the same strategies the results will not vary much
 Tingting adds that as the configuration are known, they can put effort on them.

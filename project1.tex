@@ -548,9 +548,12 @@ are using a technique for getting the rats closer to the piper by toggling the
 music. Their results were not the best but is good for configuration with 1 piper.
 
 Group 4:
-
- 
-
-
-
-
+Group 4 used for dense boards a butterfly sweep movement. Instead of going either
+as column sweep or radial, they combined them in order to sweep an area that 
+resembles a butterfly. If the board is sparse they change the strategy to a cell
+one. They calculate the cell weight and then they distribute the pipers in the 
+cells that have the highest weight. So they will send more pipers to cells that
+have better opportunities for luring rats. At last when the configuration has
+only one piper the strategy is completely different. For this configuration they
+are using a k-means approach to find the area with the more rats to go. In the 
+tournament they had a bug. Mediocre results in the tournament.

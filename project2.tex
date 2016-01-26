@@ -409,7 +409,7 @@ the Hohmann transfer energy and used it as a limit. The picking of the asteroids
 were done by calculating the N asteroids with the lowest Hohmann transfer energies
 that make 50\% of the mass. In order to have limit the energy in general they 
 calculated the Hohmann energy needed from the smallest to the largest orbit and
-used in a multiplier: $\frac{\frac{\# of remaining asteroids}{initial \# of asteroids}}{(\frac{time remaining}{time limit})^2}*\frac{avgPush Energy}{Maximum Hohmann Energy}$
+used in a multiplier: $\frac{\frac{\# of remaining asteroids}{initial \# of asteroids}}{(\frac{time remaining}{time limit})^2}*\frac{avgPush Energy}{Maximum Hohmann Energy}$.
 They also restricted the number of angles for pushing in exhaustive search and
 multiple asteroids in same orbit. Asteroids in same orbit was handled by pushing 
 the lightest to change velocity and collide with the other. Also the sink asteroid 

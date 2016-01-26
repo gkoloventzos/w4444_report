@@ -381,7 +381,7 @@ They were doing too much thinking. They have never seen so much before. Probably
 They are trying to find the mean best push and looking also into the future collisions
 They are printing the prediction and they are using elliptic orbits so it is harder
 
-group 7 
+Group 7 
 Also too much thinking. Manyi says that as they are having a tight budget they collide the inner as they have better opportunities to collide.
 Tingting assumes that if the time is limit is small then the far away ones can not be part of the solution as it needs more time to compute new orbits.
 
@@ -396,4 +396,23 @@ Preetam believes that the time limit is the point we should focus.
 Cathy believes that the strategy that takes time into account will be the best
 Vinat that finding the least first push is the turning point.
 Sania adds that groups that targeting efficiency will not be good with time limit.
+\subsection{Monday October 26, 2015 - Presentations}
 
+Group 5:
+
+They implement a number of strategies. First was the iterative approach. But the
+number of computations per day were too much. Then they implemented the gradient
+descent algorithm. The complexity now is lower in logarithmic time. Then an 
+variation of Hohmann transfer was coded. As Hohmann transfer is only for objects
+in circular orbits it is not good for ellipsoid orbits. So they are calculating 
+the Hohmann transfer energy and used it as a limit. The picking of the asteroids
+were done by calculating the N asteroids with the lowest Hohmann transfer energies
+that make 50\% of the mass. In order to have limit the energy in general they 
+calculated the Hohmann energy needed from the smallest to the largest orbit and
+used in a multiplier: $\frac{\frac{\# of remaining asteroids}{initial \# of asteroids}}{(\frac{time remaining}{time limit})^2}*\frac{avgPush Energy}{Maximum Hohmann Energy}$
+They also restricted the number of angles for pushing in exhaustive search and
+multiple asteroids in same orbit. Asteroids in same orbit was handled by pushing 
+the lightest to change velocity and collide with the other. Also the sink asteroid 
+is the one with the lowest average Hohmann transfer energy.
+
+Group 7

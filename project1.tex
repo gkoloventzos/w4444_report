@@ -465,14 +465,92 @@ break the problem in the number of pipers: 1, mid-piper and high-piper. This
 happened because the strategy to gain some more 3\%-5\% is different when you
 have 1 or more pipers. Their goals are to target the areas with more rats, areas
 that are close to pipers, areas that are close to the gates and try to get some
-more rats on the way to the gate. The rewars is calulated by $Max R = \frac{N^2}{x+5y}$, where x is the distance between piper and a point P,y is the distance 
-P and gate and N is the number of pipers within 10m of P.
+more rats on the way to the gate. The reward is calculated by $Max R = \frac{N^2}{x+5y}$, 
+where x is the distance between piper and a point P,y is the distance P and gate
+ and N is the number of pipers within 10m of P.
 
-Their indivudual strategy is to do a sweep when high density of rats and then 
-change to low density as one piper. The high desnity sweep focus on going to edges
+Their individual strategy is to do a sweep when high density of rats and then 
+change to low density as one piper. The high density sweep focus on going to edges
 , meeting outside the gate for protection and form an arc from the gate.
-Groups become competitve(stealing) when rats are sparse mainly after intial sweep.
+Groups become competitive(stealing) when rats are sparse mainly after initial 
+sweep.
 
 Group 2:
+Group 2 had the same goal of acquiring the 25\% of the rats and then try to get
+as much as they could. They had created a nice representation of rats as hot 
+spots in an image. With this they were sending their pipers in the darker areas
+to get some rats without interference. This was their primary strategy. Other 
+strategies that they used are a greedy one when all piper converge and try to
+steal rats and of course the sweep strategy for the beginning.
+
+Group 9:
+This group they started doing some incremental changes to group0 code. They have
+seen that going with one piper per rat has better outcome because if you go to
+just one you will attract more pipers. As they had to fight the sweep strategies
+of the rest they also do at first a swipe and then change to their main strategy.
+Their first sweep or as they call it, teamwork strategy was to divide the pipers
+into to teams. One will go far and bring some rats closer. There they will meet 
+with a team that takes rats and drives them inside. This strategy was vulnerable
+to stealing. 
+Their main strategy is a cell one. They divide the board in cell and send the 
+piper to the closest one with the most rats talking into account if there are more
+pipers. So at the beginning they are doing one swipe and then go to their cell 
+strategy. Their sweep strategy takes into account the sweep strategy of the other
+groups (like if they go to corners). Their stealing strategy is really good thus
+they have very good results in less pipers than the ones with multiple pipers.
+
+Group 6:
+Group 6 had divided their strategies into dense and sparse. They change their
+strategy dynamically when the rest of the rats is less than the 25\% of the 
+initial number. First they do a radial sweep in fixed angles and thy merge near
+the gate to safe capture all the rats they have. Their sparse strategy is one
+they call wolf pack as they are dividing the pipers into groups of 2 and send 
+them near the gate and were the rats are plenty. Then they come back to the gate.
+Their overall results was not good but had some individuals wins.
+
+Group 1:
+Group 1 has not implemented a sweep strategy in the whole. They created a grid
+of weighted cell which in the end was similar to sweep strategy because in dense
+boards were divided. The cell is targeted if it has high density with the 
+following function: Cell is dense if density$> 1.3*$ avg. cell density.
+The $1.3$ factor come after empirical results. Then the pipers are divided 
+proportional to cell weight. If any additional piper is left then sort rats with
+distance and send one piper to each one. They also experimented with k-means 
+clustering. Because grid cells can cluster rats but show them as low weight cell
+they started looking at a k-means approach. K-means approach was an expensive 
+one so it is only good for more than 500 rats.
+
+Group 8:
+Group 8 is doing a sweep strategy when the configuration has many pipers. They 
+are sweeping from the edges and towards their gate in order to get the rats in 
+the edges and close to their gate. After that they change to gate stealing where
+all the pipers go to one gate and try to steal rats from there. When the 
+configuration is with only one piper they are splitting into to strategies. If 
+the board is dense then they collect rats until the piper has $\frac{1}{5}$ of 
+the initial number and then go to the gate. If sparse the piper goes to the 
+closest one. The result showed that their strategies for many pipers was a good 
+one.
+
+Group 7:
+The group created a metastrategy in order to dynamically change what the pipers 
+will do. It calculates a clustering factor: standard deviation of piper density 
+in 10-meter-wide cells. Density factor $\frac{R}{P}$: number of rats in the field 
+per piper on each team. Rat-free ratio $\frac{R_f}{R}$: fraction of rats not being 
+captured by any piper. If the clustering factor is high then a sweep action is
+triggered. If density factor is not high then go for a closest rat strategy. Also
+if density factor is high but the rat free ration is not then closest rat strategy
+will be the best approach. If not then a greedy state is triggered. A potential
+field function was configured in order to penalize or reward the things that are
+in the field. Like add five for an enemy piper if is playing or 10 for not playing.
+Also a max density algorithm is used. In order to find the best place an algorithm
+with complexity of $\mathcal{O}(R^3)$ where R is the number of rats. Also they
+are using a technique for getting the rats closer to the piper by toggling the
+music. Their results were not the best but is good for configuration with 1 piper.
+
+Group 4:
+
+ 
+
+
 
 

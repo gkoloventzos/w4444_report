@@ -415,4 +415,61 @@ multiple asteroids in same orbit. Asteroids in same orbit was handled by pushing
 the lightest to change velocity and collide with the other. Also the sink asteroid 
 is the one with the lowest average Hohmann transfer energy.
 
-Group 7
+Group 7:
+This group dominated the tournament. They choose to have only circular orbits. 
+After every collision they do small pushes to make the orbit circular. This strategy
+helped them because circular orbits can described analytically easier than the
+ellipsoid one. It easier to make collision happen as the formula is easy to 
+formulate. Only 2 games were stopped because of consumption of the CPU time.
+
+Group 9:
+Group 9 starts by finding the sink asteroid finding the smaller distance with lowest
+weight amongst the asteroids. Then searching for the largest distance/mass ratio.
+In order to prune the search space they only look for pushes parallel to velocity.
+With this options they only have 3 situations that an asteroid has. Inner than
+the sink asteroid. Outer and in an intersecting orbit. Even though they did not 
+win in any match they had good results.
+
+Group 3:
+Group 3 only uses the half of Hohmann transfer in order to collide 2 asteroids.
+They do not do a second push as this kind of transfer is creating almost circular
+orbits. With such approach they always find the lowest sum of partial Hohmann
+transfer between all asteroids in order to choose the best ones that can create
+a 50\% mass asteroid. Their apprach gave them the most 3rd places amongst the groups.
+
+Group 4:
+Even though this group tried not to use Hohmann transfer, after the not good 
+results they changed their strategy also to Hohmann. They almost what other teams
+have done. Specify a sink and then prune the search tree by looking at less angles
+and less energy in pushes. They pushed asteroid in tangent orbits of the sink 
+asteroid's orbit. Still had not the best results. Performed poorly in dense 
+configurations . But they dominated the sparse ones.
+
+Group 2:
+Group 2 tried to have many heuristics and had a goal to finish all the games.
+If the time was about to end then many pushes were done in order to finish the 
+game. Only asteroids in same orbit as the sink are only pushed away. They were
+stable with dominating 3rd and 4th place. Also with their approach they always
+finish.
+
+Group 1:
+Group 1 are choosing the sink in the zone between 60\% and 75\% of the accumulated 
+mass of the asteroids. They limiting the lookup time when the time is coming to 
+the end. Their main strategy is again Hohmann transfer to the sink asteroid. The
+had 60\% of the times in 2nd or 3rd place.
+
+Group 6:
+Group's goals were to finish the game, avoid big pushes and do the best pick for
+a destination asteroid. They choose the destination asteroid in the densest part
+of the map in the hope that this local optimum will lead to an efficient solution.
+They have implemented a function type of $x^3$ of limiting the push energy with
+time. Because when the end is near you have to let bigger pushes in order to finish.
+This strategy did not result in the best results as the function that had picked
+let the limit too high too soon.
+
+Group 8:
+Group 8 implemented a clustering algorithm in order to push the asteroids that 
+are closer to each other. This idea believed that will get them with the lowest
+energy push. The pushes were also done by the Hohmann transfer. Specifically two
+variations an analyzed and reverse Hohmann transfer. At the end they had an issue
+of convergence and that cost them a big portion of energy.

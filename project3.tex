@@ -138,6 +138,7 @@ Continuing Sagar suggests that with a straight line near the edge you are going 
 Robert disagrees that you cannot interfere. You can if you go 1 or 2 lines from the edge.
 Arthur also suggested that an irregular shape can help interfere. 
 
+
 2 vs 7
 Both went for straight line. At the end they got opposite L pieces.
 Sagar has demonstrated how is possible to create an L shape corner only for them.
@@ -162,8 +163,8 @@ Kevin states that their strategy is to interrupt the convex hull of the opponent
 Amar points that if opponent randomizes their moves then stacking can help.
 Sagar asked what happens if the straight line cannot be chosen. THe answer is that are going for almost straight.
 
-6 vs 2
 
+6 vs 2
 Group 2 is choosing straight lines to cover most of the board.
 Sania stated that group 6 went well even everybody thought otherwise
 Amar believes that the problem was the 8 piece as straight line which was not used as much.
@@ -173,9 +174,11 @@ Sagar answered that is to create holes only for you to use in the future.
 Costa stated that board control should derive from your strategy.
 Robert suggested that it will be nice to see 2 groups that are trying to control the board.
 
-5-6
 
+5 vs 6
 Robert points out that their strategy also can understand if an area has space only for them to fit not to play  it but go and interfere somewhere else.
+
+
 
 deliverable: near final strategy.
 Important things that should be dealt with:
@@ -186,8 +189,8 @@ Jing believes that the interfering should be dynamic and not straight forward.
 \subsection{Monday November 9, 2015}
 Thursday midnight will be the deadline for the cookie cutter project
 
-group 6 vs 8
 
+6 vs 8
 Straight pieces vs irregular
 Group 8 are trying to be destructive by placing their piece near the opponent.
 Vinay pointed out that they played early their 8 piece in order to block potential
@@ -198,7 +201,7 @@ Sagar opinion is that placing a piece near the opponent’s is not the best dest
 Alice said that this strategy is only good for the stacking strategy
 
 
-group 1 vs 7
+1 vs 7
 Lingyuan addresses the strategy that they are using: every cell has a possible number of moves that can be participate. So make this number minimal for opponent.
 Sagar added that picking the 5 piece as 3x3 convex hull left less moves with 2 pieces
 Costa thought that leaving 2 pieces can mean that the 11 could play.
@@ -206,6 +209,7 @@ Ananya pointed out that they did not at the end because they have placed them co
 Robert believed that the destructive strategy is easier than constructive.
 Preetam said that the point is not to be destructive to yourself.
 Vishal added that tiling is not aggressive.
+
 
 2 vs 4
 straight vs piece with hole.
@@ -217,6 +221,7 @@ Artur said that this was the best move at this point to eliminate moves from the
 Nam suggested that blocking straight line horizontally can have better effects.
 Costa adds that it is not horizontal or vertical but how the opponent is playing.
 Vinay added that it is essential for this pieces with holes to prevent stacking.
+
 
 5 vs 3
 Dhruv points out that g5 left too much space between their pieces for the 11 piece of g3 to be played.
@@ -232,6 +237,7 @@ Orestis’ opinion is that diagonal is better on that.
 Sagar adds that blocking line piece is hard.
 
 Robert suggested to see 2 line strategies.
+
 
 3 vs 6
 
@@ -274,25 +280,27 @@ Professor said that this not exactly how the course is. It is build for collabor
 Vinay prefer to detect a specific piece and build a counter strategy for this then it is fair.
 Seth also added that you only know what the last deliverable and not what in the final will be.
 
+
 8 vs 4
 irregular vs stacking
 stacking win but too much space not used because the 5 piece was blocked out.
 
-8 vs 1
 
+8 vs 1
 Robert adds that if you choose a 11 diagonal piece you should choose the smaller to be similar.
 Sagar said try to understand you opponent. You should choose your 8 piece to be constructive with you and destructive for your opponent.
 Dhruv added that in destructive strategies you have more free dough in the end.
 
 8 vs 2
-
 group 2 has some space left for the 11 at the end
 
-5vs 7
+
+5 vs 7
 no destructive strategy
 Artur said that is risky letting your opponent do whatever he likes.
 
-group 7 vs 6
+
+7 vs 6
 straight line tvs corner.
 
 Preetam believed that there will be many closes matches
@@ -300,25 +308,86 @@ Sania added players will change a lot so players that do player checking may los
 Nam believes that straight lines be the winner strategy.
 Vinay straight lines was always a bit better.
 
-Is there any advantage to start first?
-
+Professor asked if there is any advantage to start first.
 Sagar said  that it is not an advantage as you use your 5 piece instead of 11 (6 pieces less)
 Seth added  that the one who put his 11 piece first will impose his will.
 
-how to put the 5 piece in first turn.
+How to put the 5 piece in first turn.
 Costa proposed not in the corner but somewhere to be destructive.
 Nam randomly will not help you but also may help the opponent.
 Tingting believed that a strategy, destructive or constructive, will decide where to place it.
 \subsection{Monday November 16, 2015}
+As in the previous presentations where 9 teams presented, the time of each group
+will be 6 minutes. George will give you a signal when one minute is left.
+
 Group 9:
+Group 9 gave an overview of most of the strategies. Also for them the selection
+of shapes goes as: Lines -> hokey shape -> L shape families. They use multiple 
+strategies over time. Like they are looking if they can counter a team that has
+an 5 piece that will fit a gap in the 11 piece. Their main strategy is a defensive
+one which they create queues of L shapes through the center of the board. That
+helps them to take control of the board and has a secondary strategy (save-for-later)
+as they are creating space that only their 11 piece can fit. They also explain
+two other constructive strategies. A square named one, that creates squares but
+leave too much space open. An aggressive one that create queues of 11 piece shapes
+with the same drawback as the previous one. They did not do as well as other teams
+in overall victories but the play well against constructive teams but had the 
+opposite for the destructive ones. Also the counter piece works good.
 
+Group 5:
+The team started with alphabetic shapes but they understood that using diagonal
+pieces had better results. This strategy is constructive for the team but destructive
+for the rest. In choosing pieces they always start from straight line in order to
+block their opponent. They created a cost function of 
 
+$cost = distanceFromCenterOfMass * 
+\frac{\sum_{pieces}{sizeOfPiece*numberOfOurMovesOfSizeDestroyed}}{\sum_{pieces}{sizeOfPiece*numberOfOpponentMovesOfSizeDestroyed}}$
 
+In the corner case of $numberOfOpponentMovesOfSizeDestroyed = 0$ then the cost 
+is an value of $Integer.MAX_VALUE$. So they choose the move with the smallest cost
+value. If all of moves with the 11 piece have $Integer.MAX_VALUE$ cost then these
+moves can only be filled by them. Then they turn to he 8 piece. If all moves are
+$Integer.MAX_VALUE$ then all of the remaining moves cannot affect the opponent.
+So do whichever one is more constructive. They won many times against groups 
+1,2,4,8,9 and lost against the rest. Against group 3 they were devastated as the
+average score difference was 186 points. 
 
+Group 2
+Their strategy is to lookahead in depth 2. For every empty square they calculated
+a score. The scoring function is to  
 
+Their backup strategy is to choose diagonals or hooks. Both strategies are not 
+optimized and this is depicted to the results. They placed 5th overall with
+catholic lose to group 9 who had won 16 games out of 80. But they had the 2nd
+average score per game.
 
+Group 8:
+The team's choice is to use irregular shape. They are looking on 1 depth search
+for best placement. They also using a purely destructive placement. They also 
+try to counter the 11 piece of the opponent. The placement is done by calculating
+the centroid and place their piece near them. If they cannot find one then put 
+one in the neighborhood of the last piece. Their scoring function for choosing 
+the best place is $score_{dough,shapes}(m) = w_{11}n_{11} + w_8n_8 + w_5n_5$ and
+they choose the best by finding the max of $score_{dough,myShapes}(m) - 
+score_{dough,opponentShapes}(m)$. For their results they won most games against
+groups 1,4,9. Also they created a really good destructive player as it created
+much dead space and so the score was forced to be low.
 
+Group 3:
+Group 3 wanted to design a scoring function that will evaluate a given board.
+But a generic search method to play a sequence of moves is too costly. So they 
+choose to play the opening moves with a more loosely strategy and when the beard
+has less moves then go their core strategy. For their function they wanted to be 
+claiming space from their opponent and less for their pieces. Also space that 
+cannot be claimed from the opponent should not be considered and favor larger 
+pieces. Another main issue is to take into account interference between possible
+moves. 
+$\Delta f(C) = \sum\limits_{(i,j)\notin C} (X_{i,j}' - X_{i,j}) + \sum\limits_{(i,j)} (Y_{i,j}' - Y_{i,j})$ 
+where $X_{i,j} \in \{0,5,8,11\}$ the size of the cutter. They had the best results
+as they won 76 out of 80. They only lost sometimes to group 7.
 
-
+Group 1:
+The group did some experiments on its own and created some strategies that was
+specific to counter act the strategies of specific players.
 
 

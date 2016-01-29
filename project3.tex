@@ -388,6 +388,50 @@ as they won 76 out of 80. They only lost sometimes to group 7.
 
 Group 1:
 The group did some experiments on its own and created some strategies that was
-specific to counter act the strategies of specific players.
+specific to counter act the strategies of specific players. The strategies that
+was created was: top down tiling with U shapes, center to edge tiling, min max 
+search and optimization. All this three are used for specific teams. For the 
+selection of the shape for the 2 first they are selecting a U shape 11 piece with
+a hole. For the min max they chose a line. In their experiments for 16 games they
+won the 11. Two times group 4 and 7 and one the group 5. But on average they had
+one of the lowest scores. The team started an argument about groups that are not 
+doing much until the last deliverable. This is counter productive and in contrast
+on what the course should be like.
 
+Group 4:
+Team decided to chose pieces that can fit together. They are trying to place their 
+11 piece in such a way that only the 5 piece can fit. For their 8 piece placement 
+they had a function in order to find which position is blocking more the opponent
+move. They did not perform well except when playing with groups 1 and 9 (10 and 6
+wins respectively). They mention that lines was the panacea of this project. Also
+understood that their strategy is too feeble to perform well against all teams.
 
+Group 6:
+Group 6 is choosing from line, diagonal and L shape their 11 piece. The rest 
+pieces are selected to fit the 11 piece. Their strategy is agnostic of what piece
+they will select. They are placing pieces that way in order to minimize opponents 
+moves. Their function to minimize is 
+\begin{equation*}
+s = \sum\limits_mWNBLOCK_{self}(m,\frac{1}{2}) - WNBLOCK_{opponent}(m,1) - \lvert m\rvert
+\end{equation*}
+
+where m is is a move under consideration, $\lvert m\rvert$ is the size of the shape placed in 
+move m, and WNBLOCK is defined as
+
+\begin{equation*}
+WNBLOCK_k(m,p) = \sum\limits_{m \in BLOCKED_k} \lvert m\rvert^P
+\end{equation*}
+
+and BLOCKED represents the set of moves blocked by m. No general strategy that 
+can be win all other teams by being only constructive or destructive. Most were
+good against certain types of polyonimos, so strategies cound be tuned to specific 
+teams. They score particular well and was 4th on the numbers of wins. 
+
+Group 7:
+Group 7 started with a problem ana;ysis of which shapes can be used and where to 
+position the pieces. Then for their strategy they made the 8 piece to fit with 
+the 11 piece. This gave them a more space to claim than making the 5 piece to fit.
+They were stacking their 11 piece in order only their 8 piece to fit. For being
+destructive they were bocking where the 11 piece of their opponent can be placed.
+This strategy make them rank in the 2nd place with the most wins. Only from group
+3 had lost more than 5 times.

@@ -388,36 +388,7 @@ The duration of the presentation is 5 minutes. George will give a signal when on
 minute will be left.
 
 Group 3:
-The team presented a problem analysis. The main question was 
-\begin{itemize}
-\item How to select the next person to talk to?
-\item How to avoid interference?
-\item When do we favor the soulmate?
-\item How to take advantage of friends?
-\item When and where to move around the room?
-\end{itemize}
 
-The team used a cost function:
-\begin{equation*}
-cost = \frac{scale\_dmin*scaleOfFreeCandidate*wisdom}{scale\_distance}
-\end{equation*}
-where:
-\begin{itemize}
-\item scale\_dmin: scale down people who are currently interfered
-\item scale of free candidate: give higher priority to free people
-\item scale\_distance: give higher priority to people that we are the closest to 
-\end{itemize}
-
-Some times stalking the soulmate is not the correct way. If talking to soulmate 
-gives is favorable talk to him if is in talking range and is the closest person
-to us and our conversation succeeded at least once in the last 3 turns. Else
-move closer to the soulmate. They had 2 strategies for candidate selection. One 
-greedy to talk to the closest one or a backup one to move closer to a person.
-Their main strategy is to move closer to a target and have a brief history in 
-order to understand if he is interested. They are trying not to waste time on
-uninterested players or when a region is too crowded. Their implementation 
-was not that good from the results they had. But they went well in cases with
-0 friends in the room.
 
 Group 5:
 The group used 2 strategies. A constructive one and with a portion of their players
@@ -539,4 +510,34 @@ best. Also as they prioritize strangers than friends their results resulted into
 less wisdom gain.
 
 Group 6:
+The team presented a problem analysis. The main question was 
+\begin{itemize}
+\item How to select the next person to talk to?
+\item How to avoid interference?
+\item When do we favor the soulmate?
+\item How to take advantage of friends?
+\item When and where to move around the room?
+\end{itemize}
+
+The team used a cost function:
+\begin{equation*}
+cost = \frac{scale\_dmin*scaleOfFreeCandidate*wisdom}{scale\_distance}
+\end{equation*}
+where:
+\begin{itemize}
+\item scale\_dmin: scale down people who are currently interfered
+\item scale of free candidate: give higher priority to free people
+\item scale\_distance: give higher priority to people that we are the closest to 
+\end{itemize}
+
+Some times stalking the soulmate is not the correct way. If talking to soulmate 
+gives is favorable talk to him if is in talking range and is the closest person
+to us and our conversation succeeded at least once in the last 3 turns. Else
+move closer to the soulmate. They had 2 strategies for candidate selection. One 
+greedy to talk to the closest one or a backup one to move closer to a person.
+Their main strategy is to move closer to a target and have a brief history in 
+order to understand if he is interested. They are trying not to waste time on
+uninterested players or when a region is too crowded. Their implementation 
+was not that good from the results they had. But they went well in cases with
+0 friends in the room.
 

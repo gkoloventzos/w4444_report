@@ -388,7 +388,17 @@ The duration of the presentation is 5 minutes. George will give a signal when on
 minute will be left.
 
 Group 3:
-
+This group set its goal on get the highest total and average wisdom per player.
+For this they need to maximize efficiency. For sparse boards they should try to
+get all wisdom. In crowded boards try not to waste time. In their initial strategy
+they were breaking conversations if the average conversation has more wisdom than
+the remaining wisdom of the current conversation. Their submitted strategy are 
+greedy on the distance. They talk to the closest one disregarding wisdom. Else
+move towards to the player with most remaining wisdom. Otherwise go to a stranger.
+For waiting they implemented a dynamic strategy as for person that you have talked
+a lot with are not worth waiting. So the waiting time is calculated by 
+$\frac{wisdon\_remaining}{10}$ ticks. Not that good results but they came 2nd for
+the games they found the soulmates.
 
 Group 5:
 The group used 2 strategies. A constructive one and with a portion of their players

@@ -471,3 +471,48 @@ points) as it means it will not start again a conversation. An exception is made
 if the player moved to us in a straight line. They did great won 841 games and
 a player of them got the highest score at 697 games. But they did not do well
 against themselves as too many unnecessary iterations to speak to each other.
+
+Group 1:
+Group 1 has split the problem on sparse and dense board strategies. Also on how 
+to gain more wisdom on situation with less or plenty strangers. They are initialize
+the average wisdom for each stranger as: $E(stranger's wisdom) = \frac{(0+10+20)/3 * (\#\_of\_strngers-1)+400}{\#\_of\_strangers}$\\
+Another part of the created strategy is the waiting decision and how to find next
+conversation.
+For the latter they have implemented a KMeamns algorithm in order to analyze
+where sparse or dense groups are in the board. From their experiments saw that 
+random jumps to region gave better result from informed ones. Their wait decision
+strategy is to start with a constant N but they changed into some more intelligent.
+They always wait N turns but it is changed along with how much wisdom someone
+gave $N = floor(\frac{wisdom}{6})$. Also if someone ignored their request, they
+black listed him as probably they had less wisdom to give than to gain. They have
+a scoring function in order to sort the possible strangers that are around 
+$expexcted\_wisdom = current\_wisdom-6*(\#\_of\_players\_with\_less\_0.5\_distance)$.
+If the player is not in walking distance then another 6 is subtracted. Also if 
+the player is our soulmate double the number that we calculated. They have as a 
+threshold to start conversation the 0.25 distance. They move halfway every tick 
+in order to achieve this. If no applicable candidate is around then move 6 units
+towards the middle. Their results are better in sparse configuration with low number
+of friends. They understood that spent too much time in where to jump with KMeans
+but in the end random jumps gave better results.
+
+Group 8:
+The group implemented a maximum likelihood estimator for unseen strangers. Their
+main strategy is a greedy one that finds the person with the highest wisdom in 6m
+range. Then they are moving near the person at 0.505 to initiate conversation.
+The expected value of an unseen stranger than is not your soulmate is as follows
+\begin{equation*}
+E[W[s]] = \frac{1}{n_r}(n_{0r}E_{us}[0] + n_{10r}E_{us}[10] + n_{20r}E_{us}[20])
+\end{equation*}
+where $n_r$ is the number of remaining unseen strangers, $n_{0r},n_{10r},n_{20r}$
+are the number of unseen 0-point, 10-point, and 20-point strangers respectively
+$E_{us}[0]=0,E_{us}[10] = 2/3 *10,E_{us}[20] = 1/3*20+1/3*10$
+Their strategy is most effective when large fraction of groups are not executing 
+similar strategies. When large number of players are aggressive then the board
+is becoming destructive as are resulting in clustering effects and interference.
+They have also implemented some adaptive behavior on the party size, the waiting
+time for a stranger and how all these are affected on how much time we have left.
+But they had a bug on the soulmate so their results are not the best possible.
+They are 5th on average score but 2nd on a mini tournament they held with the bug
+fixed.
+
+Group 9:

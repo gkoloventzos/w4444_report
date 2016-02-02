@@ -447,16 +447,23 @@ calculated by $expected wisdom = \frac{Total wisdom}{s+1}$ where s is the strang
 and $Total Wisdom = 10*s + 400$. 400 is the soulmate wisdom and 10 is the average
 wisdom amongst strangers. The wisdom-dependent waiting function is calculated:
 \begin{equation*}
-T = (2 + \frac{P_{remaining-wisdom}{20}})
+T = 2 + \frac{P_{remaining-wisdom}}{20}
 \end{equation*}
 The team also sorts stranger in order to keep track to people that have talked 
 before in order not to waste time to someone that have not much to share. They 
 also have a scoring function that makes not lose time to strangers with not much
 wisdom.
 \begin{equation*}
-\frac{remaining wisdom}{time to intiate conversation + \frac{remaining wisdom}{(1- probability of interruption)* widomrate}}\\
-remaining wisdom = \frac{number of people we want to talk to}{number of people in range of us}*number of people in range of target\\
-probability of interruption = 1 - (1-\frac{3}{18\pi})^n\\
+\begin{aligned}
+expected\_rate\_of\_wisdom\_gain\_by\_exhausting\_the\_target’s\_wisdom &=\\
+ \frac{remaining\_wisdom}{time\_to\_intiate\_conversation + \frac{remaining\_wisdom}{(1- probability\_of\_interruption)* widom\_rate}} \\
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+remaining\_wisdom &= \frac{\#\_of\_people\_we\_want\_to\_talk\_to}{\#\_of\_people\_in\_range\_of\_us}*\#\_of\_people\_in\_range\_of\_target \\
+probability\_of\_interruption &= 1 - (1-\frac{3}{18\pi})^n \\
+\end{aligned}
 \end{equation*}
 where n is the number of people within distance 3 to conversation point. Their 
 blacklist strategy is if a player leaves after or 6 or 60 seconds (1 or 10 wisdom 

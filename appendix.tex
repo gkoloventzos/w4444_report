@@ -70,7 +70,7 @@ and we substitute $\theta$ with $-\theta$ if $\vec{r} \cdot \vec{\nu} < 0$, assu
 \begin{eqnarray*}
 A = \arg(x_r,y_r) - \theta
 \end{eqnarray*}
-The $\arg(x,y)$ function is a generalization of $\tan^{-1}(y/x)$ that returns the direction of a vector $(x,y)$ in all four quadrants. It is avaiable in most programming languages as \verb#atan2(y,x)#. Now, we have all that we need to draw the orbit ellipse: $a$, $b$, and $A$. A circular orbit is a special case with $a = b$ ($A$ is undefined).
+The $\arg(x,y)$ function is a generalization of $\tan^{-1}(y/x)$ that returns the direction of a vector $(x,y)$ in all four quadrants. It is available in most programming languages as \verb#atan2(y,x)#. Now, we have all that we need to draw the orbit ellipse: $a$, $b$, and $A$. A circular orbit is a special case with $a = b$ ($A$ is undefined).
 
 Even if we know where the orbit, we don't know where exactly the object is, $\vec{r}(t)$, at every time $t$. We only know that $\vec{r}(0) = \vec{r}$ and $\vec{r}(t+kT) = \vec{r}(t)$ if $T$ is the time for a full period. In elliptical orbits caused by inverse distance forces, unless the orbit is circular, the speed is not constant. The object will move faster when closer to the pulling object (here the Sun) and slower when it is far away. In order to find the orbital position at time $t$, we first compute the initial orbital ``offset'' at $t_0$ and then find the orbital position at $t \geq t_0$.
 
@@ -191,7 +191,8 @@ An asteroid is an object that has an orbit, a mass, and a epoch $t_0$ at which t
 
 \subsection{Memory}
 
-It is a good idea to avoid generating new points if a very large number of orbital positions is consindered. The Java heap space can easily overflow and the Java Virtual Machine (JVM) will throw an exception. To contain memory use, \verb#Point# objects can be passed as parameters to the \verb#Orbit# methods and their contents will be modified. The \verb#Point# class is intentionally left mutable for this purpose.
+It is a good idea to avoid generating new points if a very large number of orbital 
+positions is considered. The Java heap space can easily overflow and the Java Virtual Machine (JVM) will throw an exception. To contain memory use, \verb#Point# objects can be passed as parameters to the \verb#Orbit# methods and their contents will be modified. The \verb#Point# class is intentionally left mutable for this purpose.
 
 \subsection{Default player}
 

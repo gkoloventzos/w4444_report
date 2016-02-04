@@ -1,6 +1,8 @@
 \section{Planet Builder}
 \subsection{Wednesday September 30, 2015 }
-Today at the beginning we talked a bit about project 1 and how it will be run and how you will get the results. A csv file will be published with the results and a script to load it in a MySQL database.
+Today at the beginning we talked a bit about project 1 and how it will be run 
+and how you will get the results. A csv file will be published with the results 
+and a script to load it in a MySQL database.
 
 Group2 was a bit slow and they found the error and send a new source code.
 
@@ -22,13 +24,16 @@ Cathy asked about hard pushes but the answer is that first hard pushes means tha
 Robert suggests that hyperbolic orbits that collide before leaving the system should be taken into account but the answer was no. As it will add unwanted complexity.
 Seth asks if we the push and collision have time measurement. The answer is no. We assume that both of them are momentary. 
 Sagar wanted to know what is the winning parameter. Mainly if time is taken into account. The exercise will measure the energy used. The time will just be for the time out. If you finish in the nick of time will be the same as if you finished after 10 second. 
-Tingting asked how they can test will be runned and how the configuration will be tested. There will be a file input in order to have specific configuration to run.
+Tingting asked how they can test what will be run and how the configuration will 
+be tested. There will be a file input in order to have specific configuration to run.
 Samar wanted to know if 2 ellipsis are intersecting will collide. The answer is that probably not. Because of the time parameter is really unlikely to be in the same place at the same time.
 Artur asked about the collisions and the volume of the asteroids. The collision will only happen if the 2 orbits collide and the distance of the centers is smaller than the radii of the asteroids.
 Constantin asked if it is possible to create an asteroid without velocity. In this version of the simulator is possible and it makes a linear orbit. This will change as it maybe an easy solution for the exercise.
 Partiban was curious if there will be partial credit. Right now the professor had not thought about it but probably will be.
 Sania and Derek asked about some the system. The orbits are all in the same direction and the simulator saves the energy we have used.
-Seth asked about the if there is a way to speed up the simulation. The answer is that always you can choose to run without the gui. Also if there is not any collision in the near future the simulator has the parameter to skip such periods.
+Seth asked about the if there is a way to speed up the simulation. The answer is 
+that always you can choose to run without the GUI. Also if there is not any 
+collision in the near future the simulator has the parameter to skip such periods.
 Limitation of the computation power had been arisen as a question. In general it is not but you can have it in their report/presentation.
 Planets are cosmetic. No collision between them as Sagar asked.
 Collisions will not lead to an asteroid leave the system. There is an exception 
@@ -50,13 +55,16 @@ Robert asked if we can run the simulator inside the simulator. This may help the
 Derek asks if the collision happens in the begin or in the end of the tick. The length of the tick will be in accordance to the radius.
 Vinay suggested that we should plan colliding the outer asteroid inwards or the one that are close to the 50\% limit. 
 This is fine but as the orbit changes in every collision so you must plan until the next collision.
-Sania wandered if the asteroids have always the same velocity. This is not true as the velocity is depended to the radius. Asteroids are faster near the sun (perihelion) than in the the further point (aphelion). 
+Sania wandered if the asteroids have always the same velocity. This is not true 
+as the velocity is depended to the radius. Asteroids are faster near the sun 
+(perihelion) than in the further point (aphelion). 
 Seth asked if they can solve the equations of the orbits. It was already answered that is too difficult and you can not predict if there will at the same point at the same time.
 Parthiban thinks that a dynamic programming solution with a bottom up approach will be a good strategy to solve the problem. But the computational time might be a drawback.
 Sagar believes as there are a finite amount of states from a push to each velocity. This would be a good space to look in order to find the softer push that will lead to the closest collision.
 Constantin raises again the issue of the skip time in the simulation.
 Lingyan suggested that we should find the asteroids that are near push them gently to collide.
-Manyi asked if they can return into circular orbit. The answer is yes but it needs specific pushes. You can look at Hohamann transfer orbit.
+Manyi asked if they can return into circular orbit. The answer is yes but it 
+needs specific pushes. You can look at Hohamann transfer orbit.
 Sania thought that a perpendicular push will get them into higher orbit. Not this is not true due to the fact that the velocity is not always perpendicular to the radius.
 Parthiban wandered if the orbit changes when asteroids pass close to each other but not collide. 
 No, the asteroids does not gravity force between them.
@@ -81,7 +89,7 @@ Samarth suggests that a negative push (opposite to direction) will give better c
 Robert does not think that it has any advantage to push in opposite direction.
 Dhruv opposes to that if anything makes them to collide faster is good.
 
-Vinay analyses that the ellipses can intersect on 4 or 6 places. So try to find these points.
+Vinay analyzes that the ellipses can intersect on 4 or 6 places. So try to find these points.
 Sania believes that we can find a perfect push that we will make the asteroids to collide on the next turn. 
 Constantin is concerned that as the energy is velocity squared, tiny pushes can do the job?
 Vinay asks how the velocity is calculated. The velocity calculation is in the document that we provided.
@@ -108,7 +116,8 @@ No clue that are making circular orbits
 
 Group 2:
 
-THe strategy of this team is similar tt group’s 7 strategy. They collide and then make the prbit circular again.
+The strategy of this team is similar to group’s 7 strategy. They collide and then 
+make the orbit circular again.
 Seth asks if the simulator can print pushes and energy.
 Sania asks why going again in circular orbit.
 Derek says that is not optimal but it is easier to make asteroids to collide.
@@ -122,7 +131,8 @@ It adds that if the difference is of phase then this can lead to a big push.
 Sagar proposes that we can search when 2 asteroids are close and try to go backwards when would be the best time to do a push in order to collide.
 Alice said that this has too many possibilities and will not always work.
 Robert says that it is easy to find if they are colliding in space with the 4 points. But we also have to look if they collide also in time.
-Seth suggests that we can skip times in order to see if they collide. because otherwise the computation can be huge.
+Seth suggests that we can skip times in order to see if they collide. Because 
+otherwise the computation can be huge.
 The main point is that they have to solve the collision problem in sub quadratic time.
 
 
@@ -172,20 +182,23 @@ Kevin said they are trying to find angles that are best for pushing in order to 
 
 Kevin believes they should choose the middle ring as half the mass is outside of it and they can win the game with just them and need smaller energy.
 Tingting opinion is that they should converge in the middle of the half outer belt of asteroids.
-Seth suggests that going for th 50% is good but in the rest maybe is an asteroid with better velocity or phase to collide with this one.
-Derek points that all of this has as argument that the mass is distributed equally. It would be the best to find the ring that has 50% of the mass outside of it and use this.
+Seth suggests that going for th 50\% is good but in the rest maybe is an asteroid with better velocity or phase to collide with this one.
+Derek points that all of this has as argument that the mass is distributed equally. 
+It would be the best to find the ring that has 50\% of the mass outside of it and use this.
 Jing believes that we should focus on the denser areas of asteroids and look from there.
 Vishal suggests another strategy that as all of the asteroids will end to the big one collide some together to lead them to the big will give us less energy from pushing each one to the big
 Sania adds that with the collision of the 2 small can give an orbit closer to the big one and then a smaller push will be required to hit the big one.
 
 Group 1:
-Vinay analyses they are trying to minimise by searching when the velocity is smaller.
+Vinay analyzes they are trying to minimize by searching when the velocity is smaller.
 Preetam tries to implement an A* algorithm for the project.
 
 Group 7:
 Dana says that are trying to avoid accidental collisions by looking into the future.
 They are focusing on the outer rims and they are looking for 40 years in the future for the minimum push.
-Ananya suggests that only colliding with small ones you can add up close to 50% but then you must search if there is any asteroid that with one push will win you the game.The benefit per mass should be taken into consideration
+Ananya suggests that only colliding with small ones you can add up close to 50\% 
+but then you must search if there is any asteroid that with one push will win 
+you the game.The benefit per mass should be taken into consideration
 
 Amar says that you can do small pushes and then some corrections
 
@@ -196,7 +209,9 @@ Dhruv told us that are finding the 5 best in the big asteroid and pick from them
 Robert said that their inner loops take too much time and they are not taking the optimal as they are limited in asteroids to avoid big calculation times.
 
 Group 5:
-They are looking in 100 days in the future to find which one is best to collide with the bigger one. But the best one (closest) may not be the best as it has big velosity ~> big push. 
+They are looking in 100 days in the future to find which one is best to collide 
+with the bigger one. But the best one (closest) may not be the best as it has big 
+velocity ~> big push. 
 Vishal points that have used inner rings which need bigger pushes thus the big energy at the end.
 
 Dhruv suggests that threshold for pushes can be a portion of initial energy of all asteroids.
@@ -286,7 +301,10 @@ Sean says the problem is not the actual end velocity but the delta between the v
 That means that going outer is bigger push.
 
 Group 6:
-Constantin describes the strategy as they are having their energy in a fix number and they are trying to find asteroids that will collide with such energy in near future. With the Orestis’ suggestion about how to calculate collision points can search a bigger space in less time.
+Constantin describes the strategy as they are having their energy in a fix number 
+and they are trying to find asteroids that will collide with such energy in near 
+future. With the Orestis’ suggestion about how to calculate collision points can 
+search a bigger space in less time.
 Samarth asks on what angle they are trying.
 Costantin replies that they are doing it randomly.
 
@@ -310,7 +328,8 @@ The deliverable for the next time is an almost ready player.
 What you will deal with on your player:
 Robert’s team will deal with asteroids in the same orbit.
 Vinay will try to do some empirical to find some thresholds
-Sania believes as they are doing good with the time to start expand a bit the search in doing some parallelisation. 
+Sania believes as they are doing good with the time to start expand a bit the 
+search in doing some parallelization. 
 \subsection{Monday October 19, 2015}
 A conversation was started regarding the configurations they submit.
 Samarth asks if there will be 2 asteroids in the same orbit. (g1)
@@ -341,7 +360,9 @@ Dhruv says that it is a patient issue that you do not know if the first you find
 Parthi suggestion is to do more search in the first years to find a small one.
 
 Group 7 
-Kevin said that they are doing calculations to find the best orbit to gather the asteroids. In this configuration finds the best is in the middle layer. Also big pushes can mean that the collision is further in the future rather than immediate.
+Kevin said that they are doing calculations to find the best orbit to gather the 
+asteroids. In this configuration finds the best is in the middle layer. Also big 
+pushes can mean that the collision is further in the future rather than immediate.
 Amar has a different opinion about the amount of push and when they will collide.
 Sania points that they are doing pushes early. Thus they end early with big amount of energy. They should invest more time to find better pushes.
 Robert says that most of the techniques will  work with almost circular orbits so they will need less energy.
@@ -351,10 +372,10 @@ Parthi says that all seems logical. Everybody should implement their idea and wi
 Group 1.
 They are getting everything to the heaviest thus the pushed everything to the inner (samarth).
 
-A conversation on what config will be used
+A conversation on what configuration will be used
 Sania would like to see some time variation.
 Cathy is not in favor of this as the time is a main option
-Preetam wants the config to be known earlier to run some experiments
+Preetam wants the configuration to be known earlier to run some experiments
 Kevin would like physical realism to the configuration. Meaning not all of the asteroids to one orbit.
 Sagar points out that this can be done because of phase difference.
 
@@ -382,8 +403,10 @@ They are trying to find the mean best push and looking also into the future coll
 They are printing the prediction and they are using elliptic orbits so it is harder
 
 Group 7 
-Also too much thinking. Manyi says that as they are having a tight budget they collide the inner as they have better opportunities to collide.
-Tingting assumes that if the time is limit is small then the far away ones can not be part of the solution as it needs more time to compute new orbits.
+Also too much thinking. Manyi says that as they are having a tight budget they 
+collide the inner as they have better opportunities to collide.
+Tingting assumes that if the time is limit is small then the far away ones can 
+not be part of the solution as it needs more time to compute new orbits.
 
 Group 2
 

@@ -441,13 +441,21 @@ also have a scoring function that makes not lose time to strangers with not much
 wisdom.
 \begin{equation*}
 \begin{aligned}
-expected\_rate\_of\_wisdom\_gain\_by\_exhausting\_the\_target’s\_wisdom &=\\
+expected\_rate\_of\_wisdom\_gain\_by\_exhausting\_the\_target’s\_wisdom =
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
  \frac{remaining\_wisdom}{time\_to\_intiate\_conversation + \frac{remaining\_wisdom}{(1- probability\_of\_interruption)* widom\_rate}} \\
 \end{aligned}
 \end{equation*}
 \begin{equation*}
 \begin{aligned}
-remaining\_wisdom &= \frac{\#\_of\_people\_we\_want\_to\_talk\_to}{\#\_of\_people\_in\_range\_of\_us}*\#\_of\_people\_in\_range\_of\_target \\
+remaining\_wisdom &=\\ \frac{\#\_of\_people\_we\_want\_to\_talk\_to}{\#\_of\_people\_in\_range\_of\_us}*\#\_of\_people\_in\_range\_of\_target \\
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
 probability\_of\_interruption &= 1 - (1-\frac{3}{18\pi})^n \\
 \end{aligned}
 \end{equation*}

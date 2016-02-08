@@ -74,7 +74,7 @@ The $\arg(x,y)$ function is a generalization of $\tan^{-1}(y/x)$ that returns th
 
 Even if we know where the orbit, we don't know where exactly the object is, $\vec{r}(t)$, at every time $t$. We only know that $\vec{r}(0) = \vec{r}$ and $\vec{r}(t+kT) = \vec{r}(t)$ if $T$ is the time for a full period. In elliptical orbits caused by inverse distance forces, unless the orbit is circular, the speed is not constant. The object will move faster when closer to the pulling object (here the Sun) and slower when it is far away. In order to find the orbital position at time $t$, we first compute the initial orbital ``offset'' at $t_0$ and then find the orbital position at $t \geq t_0$.
 
-\subsection{Orbital position $\vec{r}$ at time $t$}
+\subsection{Orbital position \texorpdfstring{$\vec{r}$}{r} at time \texorpdfstring{$t$}{t}}
 
 In order to find the position of the asteroid in time $t$, we use the fact that equal areas of orbit are covered in equal time intervals (Kepler's 2\ts{nd} law). The ``angle'' that increases linearly with $t$ is known as the \emph{mean anomaly} $M$. The angle of the point $\vec{r}$ with $\vec{f}_1-\vec{c}$ is known as the \emph{eccentric anomaly} $E$. We compute the initial eccentric anomaly $E_0$ using the true anomaly $\theta$ and the eccentricity $e$:
 \begin{eqnarray*}
@@ -119,7 +119,7 @@ which is the same logical vector as $\vec{r}$, but measured using $\vec{c}$ as t
 \end{eqnarray*}
 Note that, while an orbit is calculated using the initial $\vec{r}$ and $\vec{\nu}$, the orbital position at $t = 0$ will not be identical to the original $\vec{r}$ due to precision errors.
 
-\subsection{Orbital velocity $\vec{\nu}$ at time $t$}
+\subsection{Orbital velocity \texorpdfstring{$\vec{\nu}$}{v} at time \texorpdfstring{$t$}{t}}
 
 In order to find the velocity of the asteroid at time $t$, we first use the \emph{vis-visa} equation to find the length of the velocity vector with $\nu = |\vec{\nu}(t)|$ and $r = |\vec{r}(t)|$:
 \begin{eqnarray*}
